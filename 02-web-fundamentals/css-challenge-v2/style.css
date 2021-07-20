@@ -1,0 +1,45 @@
+#flag1 {
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    padding: 0;
+    background-color: white;
+    border-left: 200px solid blue;
+    border-right: 200px solid red;
+    position: relative;
+}
+
+#flag1:hover {
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    padding: 0;
+    background-color: white;
+    border-left: 200px solid green;
+    border-right: 200px solid orange;
+    position: relative;
+}
+
+#flag2 {
+    height: 100px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+    background-color:red;
+    border-top: 100px solid black;
+    border-bottom: 100px solid yellow;
+    position: relative;
+}
+
+#flag2:hover {
+    height: 100px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+    background-color: white;
+    border-top: 100px solid red;
+    border-bottom: 100px solid green;
+    position: relative;
+}
