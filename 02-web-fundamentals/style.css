@@ -4,6 +4,11 @@
     font-family: Tahoma, Verdana, sans-serif;
 }
 
+*::selection {
+    color: white;
+    background-color: #1182eb;
+}
+
 body {
     background-color: white;
     max-width: 1400px;
@@ -21,6 +26,11 @@ header h1 {
     font-size: 40px;
 }
 
+h3::first-letter {
+    color: violet;
+    font-size: 50px;
+}
+
 .card {
     width: 300px;
     height: auto;
@@ -31,6 +41,13 @@ header h1 {
     background-color: white;
     color: midnightblue;
     box-shadow: 5px 5px 5px 5px lightgray;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    opacity: 1;
+    
 }
 
 .card img {
@@ -46,6 +63,11 @@ h2, h3, h4, h5, h6 {
 
 #penelope-list {
     list-style-type: none;
+}
+
+
+li:hover {
+    color: #1182eb;
 }
 
 span {
