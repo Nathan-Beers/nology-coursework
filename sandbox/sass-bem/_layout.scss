@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+}
+
+.main {
+    height: 50vh;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
