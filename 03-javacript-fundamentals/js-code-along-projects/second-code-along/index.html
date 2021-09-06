@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Code along</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+    <body>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <a href="../Home/index.html"><i class="fas fa-home fa-3x"></i></a>
+                    <div class="menu-container">
+                        <a href="" onclick="handleCheckMessages(event)" id="bell"><i class="far fa-bell fa-3x"></i></a>
+                        <a href="#" onclick="openNav()" id="menu"><i class="fas fa-bars fa-3x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--Side Nav for other javascript projects-->
+        <div id="Sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../second-code-along/index.html">Second Code along</a>
+            <a href="../grade-calculator/grade.html">Grade Calculator</a>
+            
+        </div>
+
+        <div class="container">
+            <h1>Retirement Calculator</h1>
+            <input type="number" onblur="calculateYearsUntilRetirement(event)"/>
+            <h1>French Translator</h1>
+            <input type="text" onblur="getGreetingInFrench(event)" />
+            <h1>Legal Drinking age</h1>
+            <input type="number" onblur="calulateLegalAge(event)"/>
+        </div>
+
+    </body>
+</html>

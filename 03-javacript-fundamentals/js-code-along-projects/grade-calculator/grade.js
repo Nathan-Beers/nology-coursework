@@ -1,3 +1,14 @@
+// Side nav
+
+function openNav() {
+    document.getElementById("Sidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("Sidenav").style.width = "0"
+}
+
+
 function handleCalculateGrade(event) {
 
     let grade = event.target.value;
