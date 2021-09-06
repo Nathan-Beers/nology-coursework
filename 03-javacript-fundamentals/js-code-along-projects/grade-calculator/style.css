@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./resources/svg.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    vertical-align: baseline;
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav {
+    box-shadow: 0 15px 10px -3px rgba(100, 148, 237, 0.329);
+    height: 60px;
+}
+
+.nav-container {
+    width: 100vw;
+}
+
+.logo-container {
+    width: 100vw;
+    margin: 10px;
+    display: flex;
+}
+
+.menu-container {
+    display: flex;
+    width: 100vw;
+    margin-right: 30px;
+    justify-content: flex-end;
+}
+
+
+
+a#bell {
+    color: black;
+    width: 42px;
+    margin: 0 40px;
+
+}
+
+#bell:active {
+    color: purple;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 50%;
+    
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: "Fredoka One", cursive;
+    color: rgba(0, 0, 139, 0.384);
+    font-size: 50px;
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 139, 0.432);
+
+}
+
+@media screen and (max-width: 393px) {
+    input {
+        width: 200px;
+    }
+    
+}
+

@@ -6,9 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
     <body>
-        <div>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <i class="fas fa-user-graduate fa-3x"></i>
+                    <div class="menu-container">
+                        <a href="" onclick="handleCheckMessages(event)" id="bell"><i class="far fa-bell fa-3x"></i></a>
+                        <i class="fas fa-bars fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
             <h1>Grade Calculator</h1>
             <input type="text" onblur="handleCalculateGrade(event)" />
         </div>

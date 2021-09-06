@@ -34,3 +34,9 @@ function handleCalculateGrade(event) {
         alert("The percentage was " + percentage);
     }
 }
+
+// Checks messages button
+
+function handleCheckMessages(event) {
+    alert("No new messages!")
+}
