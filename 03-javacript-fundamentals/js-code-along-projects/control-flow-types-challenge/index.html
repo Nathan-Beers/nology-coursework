@@ -4,27 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Home</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-<body>
+    <body>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <a href="index.html"><i class="fas fa-home fa-3x"></i></a>
+                    <div class="menu-container">
+                        <a href="" onclick="handleCheckMessages(event)" id="bell"><i class="far fa-bell fa-3x"></i></a>
+                        <a href="#" onclick="openNav()" id="menu"><i class="fas fa-bars fa-3x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-    <!--Odd or Even number checker-->
+        <!--Side Nav for other javascript projects-->
+        <div id="Sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../second-code-along/index.html">Second Code along</a>
+            <a href="../grade-calculator/grade.html">Grade Calculator</a>
+            <a href="../control-flow-types-challenge/index.html">Control Flow & Types Challenge</a>
+            
+        </div>
 
-    <h1>Is your number Odd or Even?</h1>
-    <input type="number" onblur="handleCheckOddOrEven(event)"/>
+          <!--Odd or Even number checker-->
+        <div class="container">
+            <h1>Is your number Odd or Even?</h1>
+            <input type="number" onblur="handleCheckOddOrEven(event)"/>
 
     <!--Days until weekend calculator-->
 
-    <h1>Days Until the weekend</h1>
-    <input type="text" onblur="handleCheckDayUntilWeekend(event)"/>
+            <h1>Days Until the weekend</h1>
+            <input type="text" onblur="handleCheckDayUntilWeekend(event)"/>
 
 
     <!--Vegtable Prices, include potatoes, carrots, brocolli, cabbage and asparagus-->
 
-    <h1>Vegtable Prices</h1>
-    <p>Currently in stock potatoes, carrots, brocolli, cabbage and asparagus</p>
-    <input type = "text" onblur="checkVegtablePricingByKg(event)"/>
-    
-</body>
+            <h1>Vegtable Prices</h1>
+            <p>Currently in stock potatoes, carrots, brocolli, cabbage and asparagus</p>
+            <input type = "text" onblur="checkVegtablePricingByKg(event)"/>
+        </div>
+    </body>
 </html>
