@@ -54,3 +54,33 @@ function handleCheckDayUntilWeekend(event) {
     }
     
 }
+
+// Supermarket Vegtable pricing
+
+function checkVegtablePricingByKg(event) {
+
+    let veg = event.target.value;
+    veg = veg.toLowerCase();
+    
+    let select;
+    switch (veg) {
+        case "potatoes":
+        case "carrots":
+            select = "1.19 per Kg";
+            break;
+        case "brocolli":
+            select = "1.31 per Kg";
+            break;
+        case "cabbage":
+            select = "0.80 per Kg";
+            break;
+        case "asparagus":
+            select = "6.99 per Kg";
+    }
+
+    if(select == undefined) {
+        alert("Select veg from the above");
+    } else {
+    alert(select);
+    }
+}
