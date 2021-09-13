@@ -19,3 +19,19 @@ const calculateCircumferenceOfCircle = (diameter) => {
     const circumference = (Math.PI * diameter);
     return circumference;
 }
+
+// Write a function name getDescription that;
+// Takes 4 arguments: number of children, partner's name, geographic location, job title.
+//Outputs your statement to the console like so: "I am currently a X living in Y, and married to Z with N kids."
+// Call the function 3 times with 3 different values for the arguments.
+
+const getDescription = (numberOfChildren, partner, location, job) => {
+    return ("I am currently a " + job + " living in " + location + ", and married to " + partner + " with " + numberOfChildren + " kid/s");
+}
+
+// 
+console.log(getDescription(4, "David", "Settle", "Artist"));
+
+console.log(getDescription(2, "Anna", "London", "Chef"));
+
+console.log(getDescription(3, "Emma", "Poland", "Amazon warehouse operator"));
