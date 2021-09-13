@@ -52,16 +52,31 @@ const calculateSupply = (currentAge, amountPerDay) => {
     console.log(message);
 }
 
+calculateSupply(25, 2);
+calculateSupply(71, 4);
+calculateSupply(45, 6)
+
 // **The Temperature Converter **
 // Celsius/farenheit converter
 
 const celsiusToFarenheit = (celsius) => {
     const cToF = (celsius / 5 * 9)+ 32;
-    console.log(cToF);
+    console.log(`${celsius} °C is ${cToF} °F`);
 }
 
 const farenheitToCelsius = (farenheit) => {
     const fToC = (farenheit - 32)*5/9;
-    console.log(fToC);
+    console.log(`${farenheit} °F is ${fToC} °C`);
 }
 celsiusToFarenheit(20)
+farenheitToCelsius(55)
+
+//**The Puppy Age calculator **
+// You know how old your dog is in human years but what about dog years?
+
+const calculateDogYears = (humanYears) => {
+    const dogYears = humanYears * 7;
+    console.log(`Your dog is ${humanYears} in human years, and ${dogYears} in dog years!`);
+}
+
+calculateDogYears(5); 
