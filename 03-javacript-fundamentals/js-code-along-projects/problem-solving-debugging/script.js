@@ -7,7 +7,7 @@ const amountOfWords = 957;
 
 // 2. Before we start we need to make sure the headline isn't too long
 if (currentHeadline.length > 15) {
-    Headline = currentHeadline + "...";
+    Headline = currentHeadline.substring(0,15) + "...";
 }
 
 // 3. Show it to the user
