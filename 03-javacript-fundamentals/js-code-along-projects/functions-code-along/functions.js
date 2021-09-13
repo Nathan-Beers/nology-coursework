@@ -35,3 +35,19 @@ console.log(getDescription(4, "David", "Settle", "Artist"));
 console.log(getDescription(2, "Anna", "London", "Chef"));
 
 console.log(getDescription(3, "Emma", "Poland", "Amazon warehouse operator"));
+
+// **The Lifetime Supply of Snickers**
+
+// Write a function named calculateSupply that:
+// Takes 2 arguements: age, amount per day,
+// calculates the amount cosumed for the rest of your life (based on a consta max age).
+// Outputs the result to the screen like so: "You will X to last you until the ripe old age of Y"
+// Call the function three times, passing in different values each time.
+// bonus: accept floating pint values for amount per day, and round the result to a round number.
+
+const calculateSupply = (currentAge, amountPerDay) => {
+    const maxAge = 72
+    const  amountOfSnickersPerLifetime = (amountPerDay * 365) * (maxAge - currentAge);
+    const message = `You will need ${amountOfSnickersPerLifetime} bars of Snickers to last you until the ripe old age of ${maxAge}`;
+    console.log(message);
+}
