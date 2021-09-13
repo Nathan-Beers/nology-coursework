@@ -51,3 +51,17 @@ const calculateSupply = (currentAge, amountPerDay) => {
     const message = `You will need ${amountOfSnickersPerLifetime} bars of Snickers to last you until the ripe old age of ${maxAge}`;
     console.log(message);
 }
+
+// **The Temperature Converter **
+// Celsius/farenheit converter
+
+const celsiusToFarenheit = (celsius) => {
+    const cToF = (celsius / 5 * 9)+ 32;
+    console.log(cToF);
+}
+
+const farenheitToCelsius = (farenheit) => {
+    const fToC = (farenheit - 32)*5/9;
+    console.log(fToC);
+}
+celsiusToFarenheit(20)
