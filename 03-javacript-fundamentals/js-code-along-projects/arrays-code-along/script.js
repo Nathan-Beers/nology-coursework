@@ -10,6 +10,6 @@ const ages = [20, 25, 28, 50];
 console.log(ages[3]);
 
 // 3. Create a sample for loop
-for (let = i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
     console.log(`The index on this loop was ${i}`);
 }
