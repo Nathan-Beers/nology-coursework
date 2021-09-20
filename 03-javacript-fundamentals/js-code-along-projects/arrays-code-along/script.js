@@ -15,12 +15,18 @@ for (let i = 0; i < 5; i++) {
 }
 
 // Create a loop using an array
-for (let index = 0; index < pets.length; index++) {
-    console.log(pets[index]);
-}
+//for (let index = 0; index < pets.length; index++) {
+//    console.log(pets[index]);
+//}
 
 // Testing out different start position in the index
 
-for (let index = 2; index < coaches.length; index++) {
-    console.log(coaches[index]);
-}
+//for (let index = 2; index < coaches.length; index++) {
+//    console.log(coaches[index]);
+//}
+
+// .forEach() 
+
+coaches.forEach((coach) => {
+   console.log(coach); 
+});
