@@ -13,3 +13,14 @@ console.log(ages[3]);
 for (let i = 0; i < 5; i++) {
     console.log(`The index on this loop was ${i}`);
 }
+
+// Create a loop using an array
+for (let index = 0; index < pets.length; index++) {
+    console.log(pets[index]);
+}
+
+// Testing out different start position in the index
+
+for (let index = 2; index < coaches.length; index++) {
+    console.log(coaches[index]);
+}
