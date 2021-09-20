@@ -30,3 +30,11 @@ for (let i = 0; i < 5; i++) {
 coaches.forEach((coach) => {
    console.log(coach); 
 });
+
+// Use map to prepend a word after pets for each pet
+
+const newPets = pets.map((pet) => {
+    return "Pet - ".toLocaleLowerCase() + pet.toUpperCase();
+});
+
+console.log(newPets);
