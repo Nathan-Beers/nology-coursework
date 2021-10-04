@@ -9,9 +9,21 @@
       h4,
       h5 {
         font-family: "Poppins";
+        text-align: center;
       }
       * {
         font-family: "Lato";
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      #error1, #error2 {
+        font-size: 12px;
+        color: red;
+        text-align: left;
       }
 
       .active {
@@ -19,11 +31,26 @@
       }
 
       .valid {
-        border: 10px solid green;
+        border: 2px solid green;
       }
       .invalid {
-        border: 10px solid red;
+        border: 2px solid red;
       }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0;
+      }
+
+      p {
+        text-align: center;
+      }
+
+  
+
+    
     </style>
   </head>
   <body>
@@ -39,14 +66,17 @@
         <h3>Register your interest!</h3>
         <form>
           <div class="form-group">
-            <label class="form-label">Name</label>
-            <input class="form-input" onchange="handleInputChange(event)" />
+            <label class="form-label">Name *</label>
+            <input class="form-input"/>
+            <p id="error1"></p>
           </div>
           <div class="form-group">
-            <label class="form-label">Email</label>
+            <label class="form-label">Email *</label>
             <input class="form-input" />
+            <p id="error2"></p>
           </div>
           <button onclick="handleRegister()">Send</button>
+          <p id=""></p>
         </form>
       </section>
     </main>
@@ -64,6 +94,10 @@
             formInput[0].classList.add("active");
         });
 
+        formInput[1].addEventListener("focus", () => {
+            formInput[1].classList.add("active");
+        });
+
       // 3. Create a handleRegister function to run when the form is submitted, a simple pop please.
 
         const handleRegister = () => {
@@ -74,13 +108,33 @@
          // Can you add the class 'valid' if it has a value? > 0​
          // Can you  add the 'invalid' class if it does not? = 0
 
+        let firstError = document.getElementById("error1");
+        let secondError = document.getElementById("error2");
+
         formInput[0].addEventListener("input", (event) => {
             let inputValue = event.target.value;
 
+
             if(inputValue != undefined && inputValue.length > 0){
+                firstError.innerHTML = "";
                 event.target.classList.remove("invalid");
                 event.target.classList.add("valid");
             } else {
+                firstError.innerHTML = "Please enter your name";
+                event.target.classList.remove("valid");
+                event.target.classList.add("invalid");
+            }
+        });
+
+        formInput[1].addEventListener("input", (event) => {
+          let inputValue = event.target.value;
+
+              if(inputValue != undefined && inputValue.length > 0){
+                secondError.innerHTML = "";
+                event.target.classList.remove("invalid");
+                event.target.classList.add("valid");
+            } else {
+                secondError.innerHTML = "Please enter your email";
                 event.target.classList.remove("valid");
                 event.target.classList.add("invalid");
             }
