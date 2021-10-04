@@ -6,44 +6,36 @@
     gap: 10px;     
     }
 
-#display-container {
-    display: flex;
-    width: 100vw;
-    height: 100px;
-    justify-content: center;
-    margin: 20px 0;
 
-    #display {
-        width: 90%;
-        height: 100%;
+
+    #display-container {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
 
         #display-content {
             display: flex;
-            height: 100%;
-            width: 100%;
-            justify-content: right;
+            width: 400px;
+            height: 100px;
+            justify-content: flex-end;
             align-items: center;
+            margin: 20px 20px;
 
             p {
                 text-align: right;
             }
-        }
-
-    }
-
-}
-
-
+          }
+      }
+    
+            
+    
 
 #container {
-    display: flex;
-    flex-direction: column;
-    
-  
+    margin: 0 auto;
+    min-width: 280px;
+    max-width: 400px;
 }
-
-
-
+    
 #right-align {
     margin-left: 80px;
 }
