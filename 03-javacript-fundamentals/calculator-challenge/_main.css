@@ -9,7 +9,7 @@ body {
   background-color: #306230;
 }
 
-.buttons {
+.inputs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,10 +40,6 @@ body {
   max-width: 400px;
 }
 
-#right-align {
-  margin-left: 80px;
-}
-
 #display-content {
   background-color: #9bbc0f;
   border: solid 4px #0f380f;
@@ -53,23 +49,7 @@ body {
   border: solid 4px #0f380f;
 }
 
-img {
-  height: 60px;
-  width: 60px;
-}
-
 p {
   font-family: "Press Start 2P", cursive;
   font-size: 30px;
-}
-
-@media screen and (min-width: 420px) {
-  .responsive {
-    width: 80px;
-    height: auto;
-  }
-
-  #right-align {
-    margin-left: 100px;
-  }
 }
