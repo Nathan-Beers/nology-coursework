@@ -18,7 +18,21 @@
     </div>
     <div id="container">
         <div class="inputs">
-        
+        <label for="firstNumber">Enter your first number:</label>
+        <input type="number" id="firstNumber">
+
+        <label for="operator">Choose your operator:</label>
+        <select name="plus" id="plus">
+            <option value="+">+ Plus</option>
+            <option value="-">- Subtract</option>
+            <option value="x">x Mulitply</option>
+            <option value="÷">÷ Divide</option>
+        </select>
+
+        <label for="secondNumber">Enter your second number:</label>
+        <input type="number" id="secondNumber">
+
+        <input type="submit" onclick="runCalculation()">
         </div>
 </body>
 </html>
