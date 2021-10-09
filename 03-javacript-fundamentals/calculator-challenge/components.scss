@@ -6,3 +6,33 @@
 #container {
     border: solid 4px #0f380f;
 }
+
+.numberInputs {
+    height: 60px;
+    width: 215px;
+    border: solid 2px #9bbc0f;
+    background-color:#306230;
+    color: #9bbc0f;
+    font-size: 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#submit {
+    border: solid 2px #0f380f;
+    font-size: 20px;
+    height: 25px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #9bbc0f;
+    color: #0f380f;
+    cursor: pointer;
+}
+
+select {
+    background-color: #0f380f;
+    color: #9bbc0f;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+}

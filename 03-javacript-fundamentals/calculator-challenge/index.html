@@ -19,10 +19,10 @@
     <div id="container">
         <div class="inputs">
         <label for="firstNumber">Enter your first number:</label>
-        <input type="number" id="firstNumber">
+        <input class="numberInputs" type="number" id="firstNumber">
 
         <label for="operator">Choose your operator:</label>
-        <select name="plus" id="plus">
+        <select name="operator" id="operator">
             <option value="+">+ Plus</option>
             <option value="-">- Subtract</option>
             <option value="x">x Mulitply</option>
@@ -30,9 +30,9 @@
         </select>
 
         <label for="secondNumber">Enter your second number:</label>
-        <input type="number" id="secondNumber">
+        <input class="numberInputs" type="number" id="secondNumber">
 
-        <input type="submit" onclick="runCalculation()">
+        <input type="submit" id="submit" onclick="runCalculation()">
         </div>
 </body>
 </html>
