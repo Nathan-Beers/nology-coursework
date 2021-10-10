@@ -16,15 +16,6 @@ p, label {
   font-size: 24px;
 }
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  gap: 20px;
-}
-
 #display-container {
   display: flex;
   width: 100vw;
@@ -38,8 +29,25 @@ p, label {
   align-items: center;
   margin: 20px 20px;
 }
+#display-container #display-content #equationDisplay-el {
+  margin-bottom: 50px;
+  margin-right: 10px;
+  font-size: 12px;
+  position: absolute;
+  color: #306230;
+}
 #display-container #display-content p {
   text-align: right;
+  color: #0f380f;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 20px;
 }
 
 #container {

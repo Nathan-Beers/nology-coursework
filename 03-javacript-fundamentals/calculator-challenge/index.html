@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>16 bit Calculator</title>
     <link rel="stylesheet" href="./_main.css"/>
-    <script src="script.js"></script>
 </head>
 <body>
     <div id="display-container">
-       
             <div id="display-content">
+                <p id="equationDisplay-el"></p>
                 <p id="display-el">|</p>
             </div>
         
@@ -19,7 +18,7 @@
     <div id="container">
         <div class="inputs">
         <label for="firstNumber">Enter your first number:</label>
-        <input class="numberInputs" type="number" id="firstNumber">
+        <input class="numberInputs" type="number" id="firstNumber" onblur="getFirstNumber()">
 
         <label for="operator">Choose your operator:</label>
         <select name="operator" id="operator">
@@ -32,7 +31,8 @@
         <label for="secondNumber">Enter your second number:</label>
         <input class="numberInputs" type="number" id="secondNumber">
 
-        <input type="submit" id="submit" onclick="runCalculation()">
+        <button id="submit" onclick="calculate()">Calculate</button>
         </div>
+        <script src="./script.js"></script>
 </body>
 </html>

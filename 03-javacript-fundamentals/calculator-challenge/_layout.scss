@@ -1,15 +1,4 @@
-.inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    gap: 20px;     
-    }
-
-
-
-    #display-container {
+ #display-container {
         display: flex;
         width: 100vw;
         justify-content: center;
@@ -22,14 +11,31 @@
             align-items: center;
             margin: 20px 20px;
 
+            #equationDisplay-el {
+                margin-bottom: 50px;
+                margin-right: 10px;
+                font-size: 12px;
+                position: absolute;
+                color: #306230;
+            }
+
             p {
                 text-align: right;
+                color: #0f380f;
             }
-          }
-      }
-    
+
             
-    
+          }
+ }
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 20px;     
+    }
 
 #container {
     margin: 0 auto;
