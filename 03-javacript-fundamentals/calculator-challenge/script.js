@@ -21,8 +21,8 @@ let getOperator = (event) => {
 };
 
 let getSecondNumber = () => {
-        displayEl.innerHTML = document.getElementById("secondNumber").value;
-        secondNumber = parseInt(document.getElementById("secondNumber").value, 10);
+        displayEl.innerHTML = secondNumberEl.value;
+        secondNumber = parseInt(secondNumberEl.value, 10);
         equationDisplayEl.innerHTML = firstNumber + operator + secondNumber;
 }
 
