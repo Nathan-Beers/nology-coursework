@@ -5,7 +5,6 @@ let times = false;
 let div = false;
 let firstNumber = 0;
 let secondNumber = 0;
-let equation = [firstNumber, secondNumber];
 let submit = document.querySelector("submit");
 let equationDisplay = [];
 let equationDisplayEl = document.getElementById("equationDisplay-el")
@@ -14,6 +13,13 @@ let equationDisplayEl = document.getElementById("equationDisplay-el")
 let getFirstNumber = () => {
         displayEl.innerHTML = document.getElementById("firstNumber").value;
         equationDisplayEl.innerHTML = document.getElementById("firstNumber").value;
-        equation[0] = parseInt(document.getElementById("firstNumber").value, 10);
+        firstNumber = parseInt(document.getElementById("firstNumber").value, 10);
 };
+
+let getOperator = (event) => {
+        let operator = event.target.value;
+        displayEl.innerHTML = operator;
+        equationDisplayEl.innerHTML = firstNumber + operator;
+};
+
 
