@@ -18,10 +18,10 @@
     <div id="container">
         <div class="inputs">
             <label for="firstNumber">Enter your first number:</label>
-            <input class="numberInputs" type="number" id="firstNumber" onblur="getFirstNumber()">
+            <input class="numberInputs" type="number" id="firstNumber" oninput="getFirstNumber()">
 
             <label for="operator">Choose your operator:</label>
-            <select name="operator" id="operator" onblur="getOperator(event)">
+            <select name="operator" id="operator" oninput="getOperator(event)">
                 <option value="">Select</option>
                 <option value="+">+ Plus</option>
                 <option value="-">- Subtract</option>
@@ -30,7 +30,7 @@
             </select>
 
             <label for="secondNumber">Enter your second number:</label>
-            <input class="numberInputs" type="number" id="secondNumber" onblur="getSecondNumber()">
+            <input class="numberInputs" type="number" id="secondNumber" oninput="getSecondNumber()">
             
             <div id="reset-calculate">
                 <button id="submit" onclick="calculate()">Calculate</button>

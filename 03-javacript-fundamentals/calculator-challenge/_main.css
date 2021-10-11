@@ -52,7 +52,7 @@ p, label {
 
 #container {
   margin: 0 auto;
-  min-width: 280px;
+  min-width: 310px;
   max-width: 400px;
 }
 
@@ -88,6 +88,11 @@ p, label {
   text-align: center;
 }
 
+button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px !important;
+}
+
 #submit {
   border: solid 2px #0f380f;
   font-size: 20px;
@@ -105,4 +110,19 @@ select {
   border: none;
   height: 30px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 424px) {
+  label {
+    font-size: 12px;
+  }
+
+  .numberInputs {
+    height: 40px;
+    width: 200px;
+  }
+
+  #container {
+    width: 300px;
+  }
 }
