@@ -1,19 +1,16 @@
 let displayEl = document.getElementById("display-el");
-let add = false;
-let minus = false;
-let times = false;
-let div = false;
 let firstNumber = 0;
 let secondNumber = 0;
-let submit = document.querySelector("submit");
 let equationDisplay = [];
 let equationDisplayEl = document.getElementById("equationDisplay-el");
 let operator = "";
+let firstNumberEl = document.getElementById("firstNumber");
+let secondNumberEl = document.getElementById("secondNumber");
 
 
 let getFirstNumber = () => {
-        displayEl.innerHTML = document.getElementById("firstNumber").value;
-        firstNumber = parseInt(document.getElementById("firstNumber").value, 10);
+        displayEl.innerHTML = firstNumberEl.value;
+        firstNumber = parseInt(firstNumberEl.value, 10);
         equationDisplayEl.innerHTML = firstNumber;
 };
 
@@ -29,6 +26,32 @@ let getSecondNumber = () => {
         equationDisplayEl.innerHTML = firstNumber + operator + secondNumber;
 }
 
+let calculate = () => {
+        let equation = [firstNumber, operator, secondNumber];
+        
+        let sum;
+        switch (operator) {
+                case "+":
+                        sum = equation[0] + equation[2];
+                        displayEl.innerHTML = sum;
+                        break;
+                case "-":
+                        sum = equation[0] - equation[2];
+                        displayEl.innerHTML = sum;
+                        break;
+                case "x":
+                        sum = equation[0] * equation[2];
+                        displayEl.innerHTML = sum;
+                        break;
+                case "÷":
+                        sum = equation[0] / equation[2];
+                        displayEl.innerHTML = sum;
+                        break;   
+        } 
+
+
+
+}
 
 
 
