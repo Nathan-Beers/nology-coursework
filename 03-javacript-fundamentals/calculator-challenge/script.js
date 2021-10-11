@@ -1,7 +1,6 @@
 let displayEl = document.getElementById("display-el");
-let firstNumber = 0;
-let secondNumber = 0;
-let equationDisplay = [];
+let firstNumber = null;
+let secondNumber = null;
 let equationDisplayEl = document.getElementById("equationDisplay-el");
 let operator = "";
 let firstNumberEl = document.getElementById("firstNumber");
@@ -29,7 +28,14 @@ let getSecondNumber = () => {
 let calculate = () => {
         let equation = [firstNumber, operator, secondNumber];
         
-        let sum;
+        
+
+        if(firstNumber === null || operator === "" || secondNumber === null){
+                alert("Please enter two numbers and select an operator")
+        } else if (typeof firstNumber == "number" && operator === "" && typeof secondNumber == "number") {
+                alert("Please select an operator");
+        } else {
+                let sum;
         switch (operator) {
                 case "+":
                         sum = equation[0] + equation[2];
@@ -48,6 +54,7 @@ let calculate = () => {
                         displayEl.innerHTML = sum;
                         break;   
         } 
+}
 
 
 
