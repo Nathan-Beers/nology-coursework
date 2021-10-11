@@ -109,6 +109,14 @@ select {
   border-radius: 10px;
 }
 
+.invalid {
+  border: solid 2px red;
+}
+
+img {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 424px) {
   label {
     font-size: 12px;
