@@ -56,6 +56,18 @@ p, label {
   max-width: 400px;
 }
 
+#reset-calculate {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#reset-calculate #reset {
+  height: 60px;
+  width: 60px;
+}
+
 #display-content {
   background-color: #9bbc0f;
   border: solid 4px #0f380f;

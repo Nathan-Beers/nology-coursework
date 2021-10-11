@@ -7,6 +7,17 @@ let firstNumberEl = document.getElementById("firstNumber");
 let secondNumberEl = document.getElementById("secondNumber");
 
 
+
+let resetData = () => {
+        displayEl.innerHTML = "|";
+        equationDisplayEl.innerHTML = "";
+        firstNumber = null;
+        secondNumber = null;
+        operator = "";
+}
+
+
+
 let getFirstNumber = () => {
         displayEl.innerHTML = firstNumberEl.value;
         firstNumber = parseInt(firstNumberEl.value, 10);
@@ -36,6 +47,7 @@ let calculate = () => {
                 alert("Please select an operator");
         } else {
                 let sum;
+                equationDisplayEl.innerHTML = `${firstNumber}${operator}${secondNumber}`;
         switch (operator) {
                 case "+":
                         sum = equation[0] + equation[2];

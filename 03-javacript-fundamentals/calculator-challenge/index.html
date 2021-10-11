@@ -17,22 +17,25 @@
     </div>
     <div id="container">
         <div class="inputs">
-        <label for="firstNumber">Enter your first number:</label>
-        <input class="numberInputs" type="number" id="firstNumber" onblur="getFirstNumber()">
+            <label for="firstNumber">Enter your first number:</label>
+            <input class="numberInputs" type="number" id="firstNumber" onblur="getFirstNumber()">
 
-        <label for="operator">Choose your operator:</label>
-        <select name="operator" id="operator" onblur="getOperator(event)">
-            <option value="">Select</option>
-            <option value="+">+ Plus</option>
-            <option value="-">- Subtract</option>
-            <option value="x">x Mulitply</option>
-            <option value="÷">÷ Divide</option>
-        </select>
+            <label for="operator">Choose your operator:</label>
+            <select name="operator" id="operator" onblur="getOperator(event)">
+                <option value="">Select</option>
+                <option value="+">+ Plus</option>
+                <option value="-">- Subtract</option>
+                <option value="x">x Mulitply</option>
+                <option value="÷">÷ Divide</option>
+            </select>
 
-        <label for="secondNumber">Enter your second number:</label>
-        <input class="numberInputs" type="number" id="secondNumber" onblur="getSecondNumber()">
-
-        <button id="submit" onclick="calculate()">Calculate</button>
+            <label for="secondNumber">Enter your second number:</label>
+            <input class="numberInputs" type="number" id="secondNumber" onblur="getSecondNumber()">
+            
+            <div id="reset-calculate">
+                <button id="submit" onclick="calculate()">Calculate</button>
+                <img onclick="resetData()" id="reset"src="./resources/btn_C_unpressed.png">
+            </div>
         </div>
         <script src="./script.js"></script>
 </body>
