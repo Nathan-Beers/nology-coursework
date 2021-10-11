@@ -8,14 +8,9 @@ let secondNumberEl = document.getElementById("secondNumber");
 
 
 
-let resetData = () => {
-        displayEl.innerHTML = "|";
-        equationDisplayEl.innerHTML = "";
-        firstNumber = null;
-        secondNumber = null;
-        operator = "";
+let reset = () => {
+        location.reload();
 }
-
 
 
 let getFirstNumber = () => {
