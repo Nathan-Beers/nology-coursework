@@ -6,6 +6,7 @@ let operator = "";
 let firstNumberEl = document.getElementById("firstNumber");
 let secondNumberEl = document.getElementById("secondNumber");
 
+        
 
 
 let reset = () => {
