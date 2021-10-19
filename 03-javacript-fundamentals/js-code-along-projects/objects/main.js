@@ -62,7 +62,10 @@ const person = {
     }
 };
 
-studentContainer.innerHTML = person.getUserProfile();
+
+for(let index = 0; index < 10; index++) {
+    studentContainer.innerHTML += person.getUserProfile();
+}
 
 // WRITE A METHOD ON THE PERSON OBJECT THAT USES THE SKILLS ARRAY
 // ITERATE OVER THE SKILLS ARRAY AND GENERATE A LIST ITEM FOR EACH SKILL
