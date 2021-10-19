@@ -31,12 +31,16 @@
 // exampleObject.newKey = "new value";
 // console.log(exampleObject.newKey)
 
+const studentContainer = document.querySelector(".students-container");
+
+// studentContainer.style.border = "50px solid red";
+
 const person = {
     firstName: "Nathan",
     lastName: "Beers",
     quote: "When you get tired, learn to rest, not quit.",
     skills: ["html", "css", "javascript", "lua"],
-    imgURL: "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png",
+    imgURL: "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg",
     getFullName(){
         return `${this.firstName} ${this.lastName}`
     },
@@ -44,8 +48,21 @@ const person = {
         const skillsHTML = this.skills.map(skill => `<li>${skill}</li>`)
         console.log(skillsHTML);
         return skillsHTML.join("\n");
+    },
+    getUserProfile() {
+        const personHTML = `<article class="student-card">
+        <img src=${this.imgURL} />
+        <h2>${this.getFullName()}</h2>
+        <blockquote>${this.quote}</blockquote>
+        <h3>Skills</h3>
+        <ul>${this.getSkillsHTML()}</ul>
+    </article>
+    `
+    return personHTML;
     }
-}
+};
+
+studentContainer.innerHTML = person.getUserProfile();
 
 // WRITE A METHOD ON THE PERSON OBJECT THAT USES THE SKILLS ARRAY
 // ITERATE OVER THE SKILLS ARRAY AND GENERATE A LIST ITEM FOR EACH SKILL
