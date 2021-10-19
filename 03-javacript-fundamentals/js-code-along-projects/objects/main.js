@@ -94,6 +94,21 @@ class ExampleClass {
     }
 };
 
+// CLASS INHERTIANCE SYNTAX
+
+class ExtendedClass extends ExampleClass {
+    constructor(firstName, lastName, age, subject) {
+        super(firstName, lastName, age),
+        this.subject = subject
+    }
+
+    greet() {
+        return `Hi I am Mr ${this.lastName}, I will teach you ${this.subject}.`
+    }
+}
+
+console.log(new ExtendedClass("Nathan", "Beers", 25, "javascript").greet())
+
 // const exampleOne = new ExampleClass("Nathan", "Beers", 25);
 // const exampleTwo = new ExampleClass("John", "Doe", 37);
 
@@ -130,7 +145,7 @@ class UserProfile {
     }
 }
 
-const studentContainer = document.querySelector(".students-container")
+// const studentContainer = document.querySelector(".students-container")
 
 const nathan = new UserProfile(
     "Nathan", 
@@ -157,6 +172,6 @@ const anna = new UserProfile(
     "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
 );
 
-studentContainer.innerHTML += nathan.getProfileHTML()
-studentContainer.innerHTML += charlie.getProfileHTML()
-studentContainer.innerHTML += anna.getProfileHTML()
+// studentContainer.innerHTML += nathan.getProfileHTML()
+// studentContainer.innerHTML += charlie.getProfileHTML()
+// studentContainer.innerHTML += anna.getProfileHTML()
