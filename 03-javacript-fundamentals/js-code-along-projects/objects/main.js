@@ -31,26 +31,94 @@
 // exampleObject.newKey = "new value";
 // console.log(exampleObject.newKey)
 
-const studentContainer = document.querySelector(".students-container");
+// const studentContainer = document.querySelector(".students-container");
 
 // studentContainer.style.border = "50px solid red";
 
-const person = {
-    firstName: "Nathan",
-    lastName: "Beers",
-    quote: "When you get tired, learn to rest, not quit.",
-    skills: ["html", "css", "javascript", "lua"],
-    imgURL: "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg",
+// const person = {
+//     firstName: "Nathan",
+//     lastName: "Beers",
+//     quote: "When you get tired, learn to rest, not quit.",
+//     skills: ["html", "css", "javascript", "lua"],
+//     imgURL: "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg",
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     getSkillsHTML() {
+//         const skillsHTML = this.skills.map(skill => `<li>${skill}</li>`)
+//         console.log(skillsHTML);
+//         return skillsHTML.join("\n");
+//     },
+//     getUserProfile() {
+//         const personHTML = `<article class="student-card">
+//         <img src=${this.imgURL} />
+//         <h2>${this.getFullName()}</h2>
+//         <blockquote>${this.quote}</blockquote>
+//         <h3>Skills</h3>
+//         <ul>${this.getSkillsHTML()}</ul>
+//     </article>
+//     `
+//     return personHTML;
+//     }
+// };
+
+
+// for(let index = 0; index < 10; index++) {
+//     studentContainer.innerHTML += person.getUserProfile();
+// }
+
+// WRITE A METHOD ON THE PERSON OBJECT THAT USES THE SKILLS ARRAY
+// ITERATE OVER THE SKILLS ARRAY AND GENERATE A LIST ITEM FOR EACH SKILL
+// E.G: <li>html</li>
+// NEED TO RETURN A STRING -> ARRAY INTO A STRING
+
+// person.age = 25;
+
+// console.log(`Hi my name is ${person.firstName} ${person.lastName}!`)
+// console.log(person.getSkillsHTML());
+
+// console.log(person.getFullName())
+
+// CLASS SYNTAX
+
+// PascalCase -> naming convention for classes
+class ExampleClass {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName,
+        this.lastName = lastName,
+        this.age = age
+    }
+
+    greet() {
+        return `Hi my name is ${this.firstName} ${this.lastName}.`
+    }
+};
+
+// const exampleOne = new ExampleClass("Nathan", "Beers", 25);
+// const exampleTwo = new ExampleClass("John", "Doe", 37);
+
+
+// console.log(exampleOne.greet());
+// console.log(exampleTwo.greet());
+
+class UserProfile {
+    constructor(firstName, lastName, quote, skills, imgURL) {
+        this.firstName = firstName,
+        this.lastName = lastName,
+        this.quote = quote,
+        this.skills = skills,
+        this.imgURL = imgURL
+    }
+
     getFullName(){
         return `${this.firstName} ${this.lastName}`
-    },
+    }
     getSkillsHTML() {
         const skillsHTML = this.skills.map(skill => `<li>${skill}</li>`)
-        console.log(skillsHTML);
         return skillsHTML.join("\n");
-    },
-    getUserProfile() {
-        const personHTML = `<article class="student-card">
+    }
+    getProfileHTML() {
+        const profileHTML = `<article class="student-card">
         <img src=${this.imgURL} />
         <h2>${this.getFullName()}</h2>
         <blockquote>${this.quote}</blockquote>
@@ -58,23 +126,37 @@ const person = {
         <ul>${this.getSkillsHTML()}</ul>
     </article>
     `
-    return personHTML;
+    return profileHTML;
     }
-};
-
-
-for(let index = 0; index < 10; index++) {
-    studentContainer.innerHTML += person.getUserProfile();
 }
 
-// WRITE A METHOD ON THE PERSON OBJECT THAT USES THE SKILLS ARRAY
-// ITERATE OVER THE SKILLS ARRAY AND GENERATE A LIST ITEM FOR EACH SKILL
-// E.G: <li>html</li>
-// NEED TO RETURN A STRING -> ARRAY INTO A STRING
+const studentContainer = document.querySelector(".students-container")
 
-person.age = 25;
+const nathan = new UserProfile(
+    "Nathan", 
+    "Beers", 
+    "When you get tired, learn to rest, not quit.",
+    ["html", "css", "javascript", "lua"],
+    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
+); 
 
-// console.log(`Hi my name is ${person.firstName} ${person.lastName}!`)
-console.log(person.getSkillsHTML());
+const charlie = new UserProfile(
+    "Charlie",
+    "Richardson",
+    "It doesn't get easier, you just go faster",
+    ["html", "css", "javascript"],
+    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
 
-// console.log(person.getFullName())
+);
+
+const anna = new UserProfile(
+    "Anna",
+    "Racheva",
+    "Out of the mountain of despair, a stone of hope.",
+    ["html", "css"],
+    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
+);
+
+studentContainer.innerHTML += nathan.getProfileHTML()
+studentContainer.innerHTML += charlie.getProfileHTML()
+studentContainer.innerHTML += anna.getProfileHTML()
