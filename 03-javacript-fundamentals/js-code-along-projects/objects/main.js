@@ -36,6 +36,7 @@ const person = {
     lastName: "Beers",
     quote: "When you get tired, learn to rest, not quit.",
     skills: ["html", "css", "javascript", "lua"],
+    imgURL: "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png",
     getFullName(){
         return `${this.firstName} ${this.lastName}`
     },
