@@ -96,18 +96,18 @@ class ExampleClass {
 
 // CLASS INHERTIANCE SYNTAX
 
-class ExtendedClass extends ExampleClass {
-    constructor(firstName, lastName, age, subject) {
-        super(firstName, lastName, age),
-        this.subject = subject
-    }
+// class ExtendedClass extends ExampleClass {
+//     constructor(firstName, lastName, age, subject) {
+//         super(firstName, lastName, age),
+//         this.subject = subject
+//     }
 
-    greet() {
-        return `Hi I am Mr ${this.lastName}, I will teach you ${this.subject}.`
-    }
-}
+//     greet() {
+//         return `Hi I am Mr ${this.lastName}, I will teach you ${this.subject}.`
+//     }
+// }
 
-console.log(new ExtendedClass("Nathan", "Beers", 25, "javascript").greet())
+// console.log(new ExtendedClass("Nathan", "Beers", 25, "javascript").greet())
 
 // const exampleOne = new ExampleClass("Nathan", "Beers", 25);
 // const exampleTwo = new ExampleClass("John", "Doe", 37);
@@ -140,19 +140,40 @@ class UserProfile {
         <h3>Skills</h3>
         <ul>${this.getSkillsHTML()}</ul>
     </article>
-    `
+    `;
     return profileHTML;
     }
 }
 
-// const studentContainer = document.querySelector(".students-container")
+class PremiumProfile extends UserProfile {
+    constructor(firstName, lastName, quote, skills, imgURL, contactLink) {
+        super(firstName, lastName, quote, skills, imgURL),
+        this.contactLink = contactLink
+    }
 
-const nathan = new UserProfile(
+    getProfileHTML() {
+        const profileHTML = `<article class="student-card">
+        <img src=${this.imgURL} />
+        <h2>${this.getFullName()}</h2>
+        <blockquote>${this.quote}</blockquote>
+        <h3>Skills</h3>
+        <ul>${this.getSkillsHTML()}</ul>
+        <a href="${this.contactLink}">Lets get in touch!</a>
+    </article>
+    `;
+    return profileHTML;
+    }
+}
+
+const studentContainer = document.querySelector(".students-container")
+
+const nathan = new PremiumProfile(
     "Nathan", 
     "Beers", 
     "When you get tired, learn to rest, not quit.",
     ["html", "css", "javascript", "lua"],
-    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
+    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg",
+    "https://nathan-beers.github.io/nathanbeers.github.io/"
 ); 
 
 const charlie = new UserProfile(
@@ -160,7 +181,8 @@ const charlie = new UserProfile(
     "Richardson",
     "It doesn't get easier, you just go faster",
     ["html", "css", "javascript"],
-    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
+    "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg",
+    
 
 );
 
@@ -172,6 +194,6 @@ const anna = new UserProfile(
     "https://remaxgem.com/wp-content/themes/tolips/images/placehoder-user.jpg"
 );
 
-// studentContainer.innerHTML += nathan.getProfileHTML()
-// studentContainer.innerHTML += charlie.getProfileHTML()
-// studentContainer.innerHTML += anna.getProfileHTML()
+studentContainer.innerHTML += nathan.getProfileHTML()
+studentContainer.innerHTML += charlie.getProfileHTML()
+studentContainer.innerHTML += anna.getProfileHTML()
