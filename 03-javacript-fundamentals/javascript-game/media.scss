@@ -1,4 +1,16 @@
-#logo {
-    width: 70px;
-    height: 70px;
+@media screen and (max-width: 944px) {
+    #heading {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    
+    #logo-text {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
 }

@@ -6,6 +6,51 @@
   background-color: #f7df1e;
 }
 
+h1 {
+  font-family: "Coda", cursive;
+  font-weight: 400;
+  text-align: center;
+}
+
+#heading {
+  margin: 0 20px;
+  font-size: 32px;
+}
+
+#logo-text {
+  font-family: "Coda", cursive;
+  font-weight: 800;
+  font-size: 60px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#header-container {
+  width: 100vw;
+  height: 20vh;
+}
+#header-container #header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 944px) {
+  #heading {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 533px) {
+  #logo-text {
+    display: none;
+  }
+
+  #logo {
+    display: none;
+  }
+}
 #logo {
   width: 70px;
   height: 70px;
