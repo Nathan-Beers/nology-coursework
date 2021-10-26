@@ -6,6 +6,10 @@
     #heading {
         font-size: 28px;
     }
+
+    main #main-container  {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 533px) {
@@ -14,7 +18,19 @@
         font-size: 12px;
     }
 
-    #logo {
-        display: none;
+    #header-content {
+        flex-direction: column;
+    }
+
+    #heading {
+        font-size: 18px;
+    }
+
+    main #main-container  {
+        width: 90%;
+    }
+
+    #question-el {
+        font-size: 18px;
     }
 }

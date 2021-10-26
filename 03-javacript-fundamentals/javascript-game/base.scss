@@ -2,10 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{ 
     background-color: #f7df1e;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Coda', cursive;
     font-weight: 400;
     text-align: center;

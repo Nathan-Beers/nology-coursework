@@ -11,6 +11,35 @@
     }
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    width: 100vw;
+
+    #main-container {
+        width: 60%;
+        height: 95%;
+        background-color: white;
+        border-radius: 20px;
+
+        #image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+
+
+            #img-el {
+                height: 100px;
+                width: 90px;
+            }
+        }
+    }
+}
+
+
 #nav-bar {
     height: 10vh;
     width: 100vw;

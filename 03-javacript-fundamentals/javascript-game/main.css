@@ -3,10 +3,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: #f7df1e;
 }
 
-h1 {
+h1, h2 {
   font-family: "Coda", cursive;
   font-weight: 400;
   text-align: center;
@@ -27,6 +30,30 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
+}
+main #main-container {
+  width: 60%;
+  height: 95%;
+  background-color: white;
+  border-radius: 20px;
+}
+main #main-container #image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+main #main-container #image-container #img-el {
+  height: 100px;
+  width: 90px;
 }
 
 #nav-bar {
@@ -55,14 +82,30 @@ h1 {
   #heading {
     font-size: 28px;
   }
+
+  main #main-container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 533px) {
   .nav-content {
     font-size: 12px;
   }
 
-  #logo {
-    display: none;
+  #header-content {
+    flex-direction: column;
+  }
+
+  #heading {
+    font-size: 18px;
+  }
+
+  main #main-container {
+    width: 90%;
+  }
+
+  #question-el {
+    font-size: 18px;
   }
 }
 #logo {
