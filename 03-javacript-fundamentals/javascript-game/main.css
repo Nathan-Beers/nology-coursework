@@ -10,19 +10,11 @@ h1 {
   font-family: "Coda", cursive;
   font-weight: 400;
   text-align: center;
+  text-align: center;
 }
 
 #heading {
-  margin: 0 20px;
   font-size: 32px;
-}
-
-#logo-text {
-  font-family: "Coda", cursive;
-  font-weight: 800;
-  font-size: 60px;
-  margin-top: 10px;
-  margin-left: 20px;
 }
 
 #header-container {
@@ -37,14 +29,36 @@ h1 {
   align-items: center;
 }
 
+#nav-bar {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+#lives-container {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
 @media screen and (max-width: 944px) {
-  #heading {
+  h1 {
     font-size: 20px;
+  }
+
+  #heading {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 533px) {
-  #logo-text {
-    display: none;
+  .nav-content {
+    font-size: 12px;
   }
 
   #logo {
@@ -52,6 +66,24 @@ h1 {
   }
 }
 #logo {
-  width: 70px;
+  width: 140px;
   height: 70px;
+}
+
+.nav-content {
+  border: dotted 4px rgba(0, 0, 0, 0.158);
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#restart-el {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.lives {
+  width: 40px;
+  height: 40px;
 }
