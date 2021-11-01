@@ -44,6 +44,20 @@ main #main-container {
   background-color: white;
   border-radius: 20px;
 }
+main #main-container .answers-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+main #main-container .answers-row .answer {
+  margin: 20px 20px;
+  border: solid 2px black;
+  border-radius: 20px;
+  height: 40px;
+  width: 50%;
+  text-align: center;
+}
 main #main-container #image-container {
   display: flex;
   justify-content: center;
@@ -74,6 +88,16 @@ main #main-container #image-container #img-el {
   gap: 40px;
 }
 
+@media screen and (max-width: 1005px) {
+  .answers-row {
+    margin: 2px 0 !important;
+  }
+
+  .answer {
+    margin: 0 10px;
+    height: 20px;
+  }
+}
 @media screen and (max-width: 944px) {
   h1 {
     font-size: 20px;

@@ -1,3 +1,14 @@
+@media screen and (max-width: 1005px) {
+    .answers-row {
+        margin: 2px 0!important;
+    }
+
+    .answer {
+        margin: 0 10px;   
+        height: 20px;
+    }
+}
+
 @media screen and (max-width: 944px) {
     h1 {
         font-size: 20px;
@@ -10,6 +21,9 @@
     main #main-container  {
         width: 90%;
     }
+
+   
+
 }
 
 @media screen and (max-width: 533px) {
