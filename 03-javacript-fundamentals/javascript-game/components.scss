@@ -20,3 +20,33 @@
     width: 40px;
     height: 40px;
 }
+
+.answer {
+    cursor: pointer;
+
+    
+}
+
+.answer:hover, #next-question:hover {
+    background-color: rgba(173, 216, 230, 0.507);
+}
+
+#next-question {
+    cursor: pointer;
+}
+
+.answer:active, #next-question:active {
+    background-color: #f7df1e;
+}
+
+#restart-el:active {
+    opacity: 50%;
+}
+
+.right-answer {
+    background-color: greenyellow;
+}
+
+.wrong-answer {
+    background-color: red;
+}

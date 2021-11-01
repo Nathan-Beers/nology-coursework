@@ -9,11 +9,19 @@ body {
   background-color: #f7df1e;
 }
 
-h1, h2 {
+h1, h2, h4, h5 {
   font-family: "Coda", cursive;
   font-weight: 400;
   text-align: center;
   text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
 }
 
 #heading {
@@ -51,7 +59,7 @@ main #main-container .answers-row {
   margin: 20px 0;
 }
 main #main-container .answers-row .answer {
-  margin: 20px 20px;
+  margin: 15px 20px;
   border: solid 2px black;
   border-radius: 20px;
   height: 40px;
@@ -68,6 +76,19 @@ main #main-container #image-container {
 main #main-container #image-container #img-el {
   height: 100px;
   width: 90px;
+}
+main #next-question-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+main #next-question {
+  text-align: center;
+  border: solid 2px black;
+  border-radius: 20px;
+  height: 30px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 #nav-bar {
@@ -153,4 +174,32 @@ main #main-container #image-container #img-el {
 .lives {
   width: 40px;
   height: 40px;
+}
+
+.answer {
+  cursor: pointer;
+}
+
+.answer:hover, #next-question:hover {
+  background-color: rgba(173, 216, 230, 0.507);
+}
+
+#next-question {
+  cursor: pointer;
+}
+
+.answer:active, #next-question:active {
+  background-color: #f7df1e;
+}
+
+#restart-el:active {
+  opacity: 50%;
+}
+
+.right-answer {
+  background-color: greenyellow;
+}
+
+.wrong-answer {
+  background-color: red;
 }
