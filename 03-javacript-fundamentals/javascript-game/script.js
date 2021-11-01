@@ -17,6 +17,7 @@ let question10 = false;
 let questionDisplay = document.getElementById("question-el")
 let imageEl = document.getElementById("img-el");
 const nextQuestionDisplay = document.getElementById("next-question");
+let restartEl = document.getElementById("restart-el");
 let answer1 = document.getElementById("a1");
 let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
@@ -159,6 +160,11 @@ let q4 = () => {
 nextQuestionDisplay.addEventListener("click", () => {
     q3()
 });
+
+restartEl.addEventListener("click", () => {
+    location.reload();
+})
+
 // event listener for answer buttons 
 // runs check answer function
 // runs function disable buttons to prevent answering more than once
