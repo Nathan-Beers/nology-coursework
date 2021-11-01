@@ -14,12 +14,13 @@ let question7 = false;
 let question8 = false;
 let question9 = false;
 let question10 = false;
-const questionDisplay = document.getElementById("question-el")
+let questionDisplay = document.getElementById("question-el")
+let imageEl = document.getElementById("img-el");
 const nextQuestionDisplay = document.getElementById("next-question");
-const answer1 = document.getElementById("a1");
-const answer2 = document.getElementById("a2");
-const answer3 = document.getElementById("a3");
-const answer4 = document.getElementById("a4");
+let answer1 = document.getElementById("a1");
+let answer2 = document.getElementById("a2");
+let answer3 = document.getElementById("a3");
+let answer4 = document.getElementById("a4");
 const correctAnswer = ["Well done!", "Great job on that one!", "Excellent"];
 const wrongAnswer = ["Maybe study a little more", "That was a tough one", "Better luck next time"]
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
@@ -31,6 +32,10 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // if score is = 10 display allCorrect
 // if score is >= 5 display halfCorrect
 // if score is >5 display lost
+
+// for loop
+// if lives are = 0
+// display lost
 
 // function lost_life
 // subtract 1 from lives
@@ -57,36 +62,44 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // if question 9 is true display question 10
 // if question 10 is true function final_score
 
-// function question1 
-// questionDisplay = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
+let q2 = () => {
+    questionDisplay.innerHTML = "Inside which HTML element do we put in Javascript?";
+    imageEl.src = "./resources/html.png";
+    answer1.innerHTML = "scripting";
+    answer1.value = false;
+    answer2.innerHTML = "script";
+    answer2.value = true;
+    answer3.innerHTML = "javascript";
+    answer3.value = false;
+    answer4.innerHTML = "js";
+    answer4.value= false;
+};
 
-// function question2 
-// questionDisplay = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
+let q3 = () => {
+    questionDisplay.innerHTML = "Which of these is a Javascript framework?"
+    imageEl.src = "./resources/js.png";
+    answer1.innerHTML = "Lua";
+    answer1.value = false;
+    answer2.innerHTML = "Python";
+    answer2.value = false;
+    answer3.innerHTML = "Scss";
+    answer3.value = false;
+    answer4.innerHTML = "React";
+    answer4.value = true;
+};
 
-// function question3 
-// questionDisplay = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
-
-// function question4 
-// questionDisplay = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
+let q4 = () => {
+    questionDisplay.innerHTML = ""
+    imageEl.src = ""
+    answer1.innerHTML = ""
+    answer2.innerHTML = ""
+    answer3.innerHTML = ""
+    answer4.innerHTML = ""
+};
 
 // function question5 
 // questionDisplay = ""
+// imageEl = ""
 // answer1 = ""
 // answer2 = ""
 // answer3 = ""
@@ -94,6 +107,7 @@ const lost = "Don't get disheartened! Just practise and try again!";
 
 // function question6 
 // questionDisplay = ""
+// imageEl = ""
 // answer1 = ""
 // answer2 = ""
 // answer3 = ""
@@ -101,6 +115,7 @@ const lost = "Don't get disheartened! Just practise and try again!";
 
 // function question7 
 // questionDisplay = ""
+// imageEl = ""
 // answer1 = ""
 // answer2 = ""
 // answer3 = ""
@@ -108,6 +123,7 @@ const lost = "Don't get disheartened! Just practise and try again!";
 
 // function question8 
 // questionDisplay = ""
+// imageEl = ""
 // answer1 = ""
 // answer2 = ""
 // answer3 = ""
@@ -115,6 +131,7 @@ const lost = "Don't get disheartened! Just practise and try again!";
 
 // function question9 
 // questionDisplay = ""
+// imageEl = ""
 // answer1 = ""
 // answer2 = ""
 // answer3 = ""
@@ -122,6 +139,7 @@ const lost = "Don't get disheartened! Just practise and try again!";
 
 // function question10 
 // questionDisplay = ""
+// imageEl = ""
 // answer1 = ""
 // answer2 = ""
 // answer3 = ""
@@ -137,6 +155,10 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // if next question button is pushed
 // function check_question
 
+
+nextQuestionDisplay.addEventListener("click", () => {
+    q3()
+});
 // event listener for answer buttons 
 // runs check answer function
 // runs function disable buttons to prevent answering more than once
