@@ -186,6 +186,7 @@ main #next-question {
 
 #next-question {
   cursor: pointer;
+  display: none;
 }
 
 .answer:active, #next-question:active {
