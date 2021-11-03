@@ -1,5 +1,4 @@
 let lives = 3;
-let time = 30;
 const life1 = document.getElementById('life1-el');
 const life2 = document.getElementById('life2-el');
 const life3 = document.getElementById('life3-el');
@@ -10,10 +9,6 @@ let question3 = false;
 let question4 = false;
 let question5 = false;
 let question6 = false;
-let question7 = false;
-let question8 = false;
-let question9 = false;
-let question10 = false;
 let questionDisplay = document.getElementById("question-el")
 let imageEl = document.getElementById("img-el");
 const nextQuestionDisplay = document.getElementById("next-question");
@@ -57,11 +52,7 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // if question 3 is true display question 4
 // if question 4 is true display question 5
 // if question 5 is true display question 6
-// if question 6 is true display question 7
-// if question 7 is true display question 8
-// if question 8 is true display question 9
-// if question 9 is true display question 10
-// if question 10 is true function final_score
+// if question 6 is true function final_score
 
 let q2 = () => {
     questionDisplay.innerHTML = "Inside which HTML element do we put in Javascript?";
@@ -90,61 +81,44 @@ let q3 = () => {
 };
 
 let q4 = () => {
-    questionDisplay.innerHTML = ""
-    imageEl.src = ""
-    answer1.innerHTML = ""
-    answer2.innerHTML = ""
-    answer3.innerHTML = ""
-    answer4.innerHTML = ""
+    questionDisplay.innerHTML = "What is the correct syntax to refer an external script file?";
+    imageEl.src = "./resources/js-square-brands.png";
+    answer1.innerHTML = `script name="script.js"`;
+    answer1.value = false;
+    answer2.innerHTML = `script src="script.js"`;
+    answer2.value = true;
+    answer3.innerHTML = `script href="script.js"`;
+    answer3.value = false;
+    answer4.innerHTML = `link src="script.js"`;
+    answer4.value = false;
 };
 
-// function question5 
-// questionDisplay = ""
-// imageEl = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
+let q5 = () => {
+    questionDisplay.innerHTML = "How do you add a comment in Javascript?";
+    imageEl.src = "./resources/comment.png";
+    answer1.innerHTML = "// Comment";
+    answer1.value = true;
+    answer2.innerHTML = "# Comment";
+    answer2.value = false;
+    answer3.innerHTML = "--Comment--";
+    answer3.value = false;
+    answer4.innerHTML = "| Comment";
+    answer4.value = false;
+};
 
-// function question6 
-// questionDisplay = ""
-// imageEl = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
 
-// function question7 
-// questionDisplay = ""
-// imageEl = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
-
-// function question8 
-// questionDisplay = ""
-// imageEl = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
-
-// function question9 
-// questionDisplay = ""
-// imageEl = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
-
-// function question10 
-// questionDisplay = ""
-// imageEl = ""
-// answer1 = ""
-// answer2 = ""
-// answer3 = ""
-// answer4 = ""
+let q6 = () => { 
+    questionDisplay.innerHTML = "const age = (3 + 2 - 1)*2";
+    imageEl.src = "./resources/calculate.png";
+    answer1.innerHTML = "9";
+    answer1.value = false;
+    answer2.innerHTML = "10";
+    answer2.value = false;
+    answer3.innerHTML = "(3 + 2 - 1)*2";
+    answer3.value = false;
+    answer4.innerHTML = "8";
+    answer4.value = true;
+};
 
 // function check_answer
 // question = true
@@ -158,7 +132,7 @@ let q4 = () => {
 
 
 nextQuestionDisplay.addEventListener("click", () => {
-    q3()
+    q6()
 });
 
 restartEl.addEventListener("click", () => {
