@@ -9,7 +9,7 @@ body {
   background-color: #f7df1e;
 }
 
-h1, h2, h4, h5 {
+h1, h2, h4, h5, button {
   font-family: "Coda", cursive;
   font-weight: 400;
   text-align: center;
