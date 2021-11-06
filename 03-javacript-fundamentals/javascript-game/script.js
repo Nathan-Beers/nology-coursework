@@ -1,8 +1,9 @@
 let lives = 3;
-const life1 = document.getElementById('life1-el');
-const life2 = document.getElementById('life2-el');
-const life3 = document.getElementById('life3-el');
+const life1 = document.getElementById("life1-el");
+const life2 = document.getElementById("life2-el");
+const life3 = document.getElementById("life3-el");
 let points = 0;
+let pointsEl = document.getElementById("points-el");
 let question1 = false;
 let question2 = false;
 let question3 = false;
@@ -61,6 +62,10 @@ let lostLife = () => {
 // add 1 to points
 // display correctAnswer string random
 
+let correctAnswer = () => {
+    points += 1;
+    pointsEl.innerHTML = points;
+};
 
 
 // function check_question
