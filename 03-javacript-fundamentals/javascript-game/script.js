@@ -77,6 +77,24 @@ let correctAnswer = () => {
 // if question 5 is true display question 6
 // if question 6 is true function final_score
 
+let checkQuestion = () => {
+    if(question6 = true) {
+        finalScore();
+    } else if (question5 = true) {
+        q6();
+    } else if (question4 = true) {
+        q5();
+    } else if (question3 = true) {
+        q4();
+    } else if (question2 = true) {
+        q3();
+    } else {
+        q2();
+    }; 
+};
+
+// functions to change display for each question
+
 let q2 = () => {
     questionDisplay.innerHTML = "Inside which HTML element do we put in Javascript?";
     imageEl.src = "./resources/html.png";
