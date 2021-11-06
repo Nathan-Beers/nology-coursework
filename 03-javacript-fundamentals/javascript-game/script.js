@@ -17,6 +17,7 @@ let answer1 = document.getElementById("a1");
 let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
 let answer4 = document.getElementById("a4");
+let answerButtons = document.querySelector(".answer");
 const correctAnswer = ["Well done!", "Great job on that one!", "Excellent"];
 const wrongAnswer = ["Maybe study a little more", "That was a tough one", "Better luck next time"]
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
@@ -41,9 +42,26 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // else if lives less than or equal to 0 
 // display lost message
 
+let lostLife = () => {
+    if(lives = 3) {
+        lives -= 1;
+        life1.src = "./resources/lost-lives.png";
+    } else if(lives = 2) {
+        lives -= 1;
+        life2.src = "./resources/lost-lives.png";
+    } else {
+        lives = 0;
+        life3.src = "./resources/lost-lives.png";
+        finalScore();
+    };
+};
+
+
 // function correct_answer
 // add 1 to points
 // display correctAnswer string random
+
+
 
 // function check_question
 // switch case if all questions are false display question 1
@@ -108,7 +126,7 @@ let q5 = () => {
 
 
 let q6 = () => { 
-    questionDisplay.innerHTML = "const age = (3 + 2 - 1)*2";
+    questionDisplay.innerHTML = "What would: const age = (3 + 2 - 1)*2 print?";
     imageEl.src = "./resources/calculate.png";
     answer1.innerHTML = "9";
     answer1.value = false;
@@ -130,15 +148,34 @@ let q6 = () => {
 // if next question button is pushed
 // function check_question
 
-
 nextQuestionDisplay.addEventListener("click", () => {
     q6()
 });
 
+// event listener for restart button
+
 restartEl.addEventListener("click", () => {
     location.reload();
-})
+});
 
-// event listener for answer buttons 
-// runs check answer function
-// runs function disable buttons to prevent answering more than once
+// event listeners for answer buttons, and disables buttons when pressed
+
+answer1.addEventListener("click", () => {
+    checkAnswer();
+    answerButtons.disabled = true;
+});
+
+answer2.addEventListener("click", () => {
+    checkAnswer();
+    answerButtons.disabled = true;
+});
+
+answer3.addEventListener("click", () => {
+    checkAnswer();
+    answerButtons.disabled = true;
+});
+
+answer4.addEventListener("click", () => {
+    checkAnswer();
+    answerButtons.disabled = true;
+});
