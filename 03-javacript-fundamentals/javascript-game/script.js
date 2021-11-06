@@ -32,7 +32,19 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // if score is >5 display lost
 
 let finalScore = () => {
-   
+    imageEl.style.display = "none";
+    answer1.style.display = "none";
+    answer2.style.display = "none";
+    answer3.style.display = "none";
+    answer4.style.display = "none";
+    nextQuestionDisplay.style.display = "none";
+    if(points === 6){
+        questionDisplay.innerHTML = allCorrect;
+    } else if (points >= 3) {
+        questionDisplay.innerHTML = halfCorrect;
+    } else {
+        questionDisplay.innerHTML = lost;
+    };
 };
 
 // for loop
