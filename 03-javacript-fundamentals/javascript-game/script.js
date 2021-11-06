@@ -4,7 +4,7 @@ const life2 = document.getElementById("life2-el");
 const life3 = document.getElementById("life3-el");
 let points = 0;
 let pointsEl = document.getElementById("points-el");
-let question1 = false;
+let question1 = true;
 let question2 = false;
 let question3 = false;
 let question4 = false;
@@ -30,6 +30,10 @@ const lost = "Don't get disheartened! Just practise and try again!";
 // if score is = 10 display allCorrect
 // if score is >= 5 display halfCorrect
 // if score is >5 display lost
+
+let finalScore = () => {
+   
+};
 
 // for loop
 // if lives are = 0
@@ -77,20 +81,22 @@ let correct = () => {
 // if question 5 is true display question 6
 // if question 6 is true function final_score
 
-let checkQuestion = () => {
-    if(question6 = true) {
-        // finalScore();
-    } else if (question5 = true) {
+let nextQuestion = () => {
+    if(question6 === true) {
+        finalScore();
+    } else if (question5 === true) {
         q6();
-    } else if (question4 = true) {
+    } else if (question4 === true) {
         q5();
-    } else if (question3 = true) {
+    } else if (question3 === true) {
         q4();
-    } else if (question2 = true) {
+    } else if (question2 === true) {
         q3();
+    } else if (question1 === true) {
+        q2()
     } else {
-        q2();
-    }; 
+        
+    }
 };
 
 // functions to change display for each question
@@ -100,10 +106,12 @@ let q2 = () => {
     imageEl.src = "./resources/html.png";
     answer1.innerHTML = "scripting";
     answer2.innerHTML = "script";
-    answer2.setAttribute("value") = true;
+    answer2.setAttribute("value", "true");
     answer3.innerHTML = "javascript";
-    answer3.removeAttribute("value");
+    answer3.removeAttribute("value", "true");
     answer4.innerHTML = "js";
+    question2 = true;
+    question1 = false;
 };
 
 let q3 = () => {
@@ -113,8 +121,10 @@ let q3 = () => {
     answer2.innerHTML = "Python";
     answer3.innerHTML = "Scss";
     answer4.innerHTML = "React";
-    answer4.setAttribute("value") = true;
-    answer3.removeAttribute("value");
+    answer4.setAttribute("value", "true");
+    answer2.removeAttribute("value", "true");
+    question3 = true;
+    question2 = false;
 };
 
 let q4 = () => {
@@ -122,19 +132,25 @@ let q4 = () => {
     imageEl.src = "./resources/js-square-brands.png";
     answer1.innerHTML = `script name="script.js"`;
     answer2.innerHTML = `script src="script.js"`;
-    answer2.setAttribute("value") = true;
+    answer2.setAttribute("value", "true");
     answer3.innerHTML = `script href="script.js"`;
     answer4.innerHTML = `link src="script.js"`;
+    answer4.removeAttribute("value", "true")
+    question4 = true;
+    question3 = false;
 };
 
 let q5 = () => {
     questionDisplay.innerHTML = "How do you add a comment in Javascript?";
     imageEl.src = "./resources/comment.png";
     answer1.innerHTML = "// Comment";
-    answer1.setAttribute("value") = true;
+    answer1.setAttribute("value", "true");
     answer2.innerHTML = "# Comment";
     answer3.innerHTML = "--Comment--";
     answer4.innerHTML = "| Comment";
+    answer2.removeAttribute("value", "true");
+    question5 = true;
+    question4 = false;
 };
 
 
@@ -145,17 +161,10 @@ let q6 = () => {
     answer2.innerHTML = "10";
     answer3.innerHTML = "(3 + 2 - 1)*2";
     answer4.innerHTML = "8";
-    answer4.setAttribute("value") = true;
-};
-
-// function check_answer
-// question = true
-// if correct = true answer is true function correct_answer
-// else function lost_life
-// display next question button
-
-let checkAnswer = () => {
-    
+    answer4.setAttribute("value", "true");
+    answer1.removeAttribute("value", "true");
+    question6 = true;
+    question5 = false;
 };
 
 // event listener for next question button
@@ -163,13 +172,12 @@ let checkAnswer = () => {
 // function check_question
 
 nextQuestionDisplay.addEventListener("click", () => {
+    nextQuestion();
     answer1.classList.remove("right-answer","wrong-answer");
     answer2.classList.remove("right-answer","wrong-answer");
     answer3.classList.remove("right-answer","wrong-answer");
     answer4.classList.remove("right-answer","wrong-answer");
     enable();
-    q3();
-    
 });
 
 // event listener for restart button
@@ -199,9 +207,8 @@ let enable = () => {
 // event listeners for answer buttons, and disables buttons when pressed
 
 answer1.addEventListener("click", () => {
-    // checkAnswer();
     disable();
-    if(answer1.getAttribute("value")) {
+    if(answer1.getAttribute("value", "true")) {
         correct();
         answer1.classList.add("right-answer")
     } else {
@@ -211,9 +218,8 @@ answer1.addEventListener("click", () => {
 });
 
 answer2.addEventListener("click", () => {
-    // checkAnswer();
     disable();
-    if(answer2.getAttribute("value")) {
+    if(answer2.getAttribute("value", "true")) {
         correct();
         answer2.classList.add("right-answer")
     } else {
@@ -223,9 +229,8 @@ answer2.addEventListener("click", () => {
 });
 
 answer3.addEventListener("click", () => {
-    // checkAnswer();
     disable();
-    if(answer3.getAttribute("value")) {
+    if(answer3.getAttribute("value", "true")) {
         correct();
         answer3.classList.add("right-answer")
     } else {
@@ -235,9 +240,8 @@ answer3.addEventListener("click", () => {
 });
 
 answer4.addEventListener("click", () => {
-    // checkAnswer();
     disable();
-    if(answer4.getAttribute("value")) {
+    if(answer4.getAttribute("value", "true")) {
         correct();
         answer4.classList.add("right-answer")
     } else {
