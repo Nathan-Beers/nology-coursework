@@ -18,7 +18,7 @@ let answer1 = document.getElementById("a1");
 let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
 let answer4 = document.getElementById("a4");
-let answerButtons = document.querySelectorAll(".answer");
+let answerButtons = document.getElementsByClassName(".answer");
 const correctAnswer = ["Well done!", "Great job on that one!", "Excellent"];
 const wrongAnswer = ["Maybe study a little more", "That was a tough one", "Better luck next time"]
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
@@ -163,7 +163,8 @@ let checkAnswer = () => {
 // function check_question
 
 nextQuestionDisplay.addEventListener("click", () => {
-    q3()
+    enable();
+    q3();
 });
 
 // event listener for restart button
@@ -179,6 +180,13 @@ let disable = () => {
     answer2.disabled = true;
     answer3.disabled = true;
     answer4.disabled = true;
+};
+
+let enable = () => {
+    answer1.disabled = false;
+    answer2.disabled = false;
+    answer3.disabled = false;
+    answer4.disabled = false;
 };
 
 // event listeners for answer buttons, and disables buttons when pressed
