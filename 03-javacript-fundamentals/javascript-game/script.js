@@ -51,6 +51,8 @@ let finalScore = () => {
 // if lives are = 0
 // display lost
 
+
+
 // function lost_life
 // subtract 1 from lives
 // if lives = 3 then change life1 image to empty heart
@@ -69,7 +71,7 @@ let lostLife = () => {
     } else {
         lives = 0;
         life3.src = "./resources/lost-lives.png";
-        // finalScore();
+        finalScore();
     };
 };
 
