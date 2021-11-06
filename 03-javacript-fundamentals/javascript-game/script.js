@@ -60,10 +60,10 @@ let finalScore = () => {
 // display lost message
 
 let lostLife = () => {
-    if(lives = 3) {
+    if(lives === 3) {
         lives -= 1;
         life1.src = "./resources/lost-lives.png";
-    } else if(lives = 2) {
+    } else if(lives === 2) {
         lives -= 1;
         life2.src = "./resources/lost-lives.png";
     } else {
