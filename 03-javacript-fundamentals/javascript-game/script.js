@@ -18,7 +18,7 @@ let answer1 = document.getElementById("a1");
 let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
 let answer4 = document.getElementById("a4");
-let answerButtons = document.querySelector(".answer");
+let answerButtons = document.querySelectorAll(".answer");
 const correctAnswer = ["Well done!", "Great job on that one!", "Excellent"];
 const wrongAnswer = ["Maybe study a little more", "That was a tough one", "Better luck next time"]
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
@@ -102,6 +102,7 @@ let q2 = () => {
     answer2.innerHTML = "script";
     answer2.setAttribute("value") = true;
     answer3.innerHTML = "javascript";
+    answer3.removeAttribute("value");
     answer4.innerHTML = "js";
 };
 
@@ -113,6 +114,7 @@ let q3 = () => {
     answer3.innerHTML = "Scss";
     answer4.innerHTML = "React";
     answer4.setAttribute("value") = true;
+    answer3.removeAttribute("value");
 };
 
 let q4 = () => {
@@ -161,7 +163,7 @@ let checkAnswer = () => {
 // function check_question
 
 nextQuestionDisplay.addEventListener("click", () => {
-    checkQuestion()
+    q3()
 });
 
 // event listener for restart button
@@ -170,44 +172,61 @@ restartEl.addEventListener("click", () => {
     location.reload();
 });
 
+// disable buttons 
+
+let disable = () => {
+    answer1.disabled = true;
+    answer2.disabled = true;
+    answer3.disabled = true;
+    answer4.disabled = true;
+};
+
 // event listeners for answer buttons, and disables buttons when pressed
 
 answer1.addEventListener("click", () => {
     // checkAnswer();
-    answerButtons.disabled = true;
+    disable();
     if(answer1.getAttribute("value")) {
         correct();
+        answer1.classList.add("right-answer")
     } else {
         lostLife();
+        answer1.classList.add("wrong-answer")
     }
 });
 
 answer2.addEventListener("click", () => {
     // checkAnswer();
-    answerButtons.disabled = true;
+    disable();
     if(answer2.getAttribute("value")) {
         correct();
+        answer2.classList.add("right-answer")
     } else {
         lostLife();
+        answer2.classList.add("wrong-answer")
     }
 });
 
 answer3.addEventListener("click", () => {
     // checkAnswer();
-    answerButtons.disabled = true;
+    disable();
     if(answer3.getAttribute("value")) {
         correct();
+        answer3.classList.add("right-answer")
     } else {
         lostLife();
+        answer3.classList.add("wrong-answer")
     }
 });
 
 answer4.addEventListener("click", () => {
     // checkAnswer();
-    answerButtons.disabled = true;
+    disable();
     if(answer4.getAttribute("value")) {
         correct();
+        answer4.classList.add("right-answer")
     } else {
         lostLife();
+        answer4.classList.add("wrong-answer")
     }
 });
