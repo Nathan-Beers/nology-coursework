@@ -53,7 +53,7 @@ let lostLife = () => {
     } else {
         lives = 0;
         life3.src = "./resources/lost-lives.png";
-        finalScore();
+        // finalScore();
     };
 };
 
@@ -62,7 +62,7 @@ let lostLife = () => {
 // add 1 to points
 // display correctAnswer string random
 
-let correctAnswer = () => {
+let correct = () => {
     points += 1;
     pointsEl.innerHTML = points;
 };
@@ -79,7 +79,7 @@ let correctAnswer = () => {
 
 let checkQuestion = () => {
     if(question6 = true) {
-        finalScore();
+        // finalScore();
     } else if (question5 = true) {
         q6();
     } else if (question4 = true) {
@@ -167,12 +167,16 @@ let q6 = () => {
 // else function lost_life
 // display next question button
 
+let checkAnswer = () => {
+    
+};
+
 // event listener for next question button
 // if next question button is pushed
 // function check_question
 
 nextQuestionDisplay.addEventListener("click", () => {
-    q6()
+    checkQuestion()
 });
 
 // event listener for restart button
@@ -184,21 +188,41 @@ restartEl.addEventListener("click", () => {
 // event listeners for answer buttons, and disables buttons when pressed
 
 answer1.addEventListener("click", () => {
-    checkAnswer();
+    // checkAnswer();
     answerButtons.disabled = true;
+    if(answer1.value = true) {
+        correct();
+    } else {
+        lostLife();
+    }
 });
 
 answer2.addEventListener("click", () => {
-    checkAnswer();
+    // checkAnswer();
     answerButtons.disabled = true;
+    if(answer2.value = true) {
+        correct();
+    } else {
+        lostLife();
+    }
 });
 
 answer3.addEventListener("click", () => {
-    checkAnswer();
+    // checkAnswer();
     answerButtons.disabled = true;
+    if(answer3.value = true) {
+        correct();
+    } else {
+        lostLife();
+    }
 });
 
 answer4.addEventListener("click", () => {
-    checkAnswer();
+    // checkAnswer();
     answerButtons.disabled = true;
+    if(answer4.value = true) {
+        correct();
+    } else {
+        lostLife();
+    }
 });
