@@ -64,7 +64,7 @@ let lostLife = () => {
 
 let correct = () => {
     points += 1;
-    pointsEl.innerHTML = points;
+    pointsEl.innerHTML = `Points: ${points}/6`;
 };
 
 
@@ -99,52 +99,40 @@ let q2 = () => {
     questionDisplay.innerHTML = "Inside which HTML element do we put in Javascript?";
     imageEl.src = "./resources/html.png";
     answer1.innerHTML = "scripting";
-    answer1.value = false;
     answer2.innerHTML = "script";
-    answer2.value = true;
+    answer2.setAttribute("value") = true;
     answer3.innerHTML = "javascript";
-    answer3.value = false;
     answer4.innerHTML = "js";
-    answer4.value= false;
 };
 
 let q3 = () => {
     questionDisplay.innerHTML = "Which of these is a Javascript framework?"
     imageEl.src = "./resources/js.png";
     answer1.innerHTML = "Lua";
-    answer1.value = false;
     answer2.innerHTML = "Python";
-    answer2.value = false;
     answer3.innerHTML = "Scss";
-    answer3.value = false;
     answer4.innerHTML = "React";
-    answer4.value = true;
+    answer4.setAttribute("value") = true;
 };
 
 let q4 = () => {
     questionDisplay.innerHTML = "What is the correct syntax to refer an external script file?";
     imageEl.src = "./resources/js-square-brands.png";
     answer1.innerHTML = `script name="script.js"`;
-    answer1.value = false;
     answer2.innerHTML = `script src="script.js"`;
-    answer2.value = true;
+    answer2.setAttribute("value") = true;
     answer3.innerHTML = `script href="script.js"`;
-    answer3.value = false;
     answer4.innerHTML = `link src="script.js"`;
-    answer4.value = false;
 };
 
 let q5 = () => {
     questionDisplay.innerHTML = "How do you add a comment in Javascript?";
     imageEl.src = "./resources/comment.png";
     answer1.innerHTML = "// Comment";
-    answer1.value = true;
+    answer1.setAttribute("value") = true;
     answer2.innerHTML = "# Comment";
-    answer2.value = false;
     answer3.innerHTML = "--Comment--";
-    answer3.value = false;
     answer4.innerHTML = "| Comment";
-    answer4.value = false;
 };
 
 
@@ -152,13 +140,10 @@ let q6 = () => {
     questionDisplay.innerHTML = "What would: const age = (3 + 2 - 1)*2 print?";
     imageEl.src = "./resources/calculate.png";
     answer1.innerHTML = "9";
-    answer1.value = false;
     answer2.innerHTML = "10";
-    answer2.value = false;
     answer3.innerHTML = "(3 + 2 - 1)*2";
-    answer3.value = false;
     answer4.innerHTML = "8";
-    answer4.value = true;
+    answer4.setAttribute("value") = true;
 };
 
 // function check_answer
@@ -190,7 +175,7 @@ restartEl.addEventListener("click", () => {
 answer1.addEventListener("click", () => {
     // checkAnswer();
     answerButtons.disabled = true;
-    if(answer1.value = true) {
+    if(answer1.getAttribute("value")) {
         correct();
     } else {
         lostLife();
@@ -200,7 +185,7 @@ answer1.addEventListener("click", () => {
 answer2.addEventListener("click", () => {
     // checkAnswer();
     answerButtons.disabled = true;
-    if(answer2.value = true) {
+    if(answer2.getAttribute("value")) {
         correct();
     } else {
         lostLife();
@@ -210,7 +195,7 @@ answer2.addEventListener("click", () => {
 answer3.addEventListener("click", () => {
     // checkAnswer();
     answerButtons.disabled = true;
-    if(answer3.value = true) {
+    if(answer3.getAttribute("value")) {
         correct();
     } else {
         lostLife();
@@ -220,7 +205,7 @@ answer3.addEventListener("click", () => {
 answer4.addEventListener("click", () => {
     // checkAnswer();
     answerButtons.disabled = true;
-    if(answer4.value = true) {
+    if(answer4.getAttribute("value")) {
         correct();
     } else {
         lostLife();
