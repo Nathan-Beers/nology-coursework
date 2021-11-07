@@ -11,6 +11,7 @@ let question4 = false;
 let question5 = false;
 let question6 = false;
 let questionDisplay = document.getElementById("question-el")
+let finalDisplay = document.getElementById("main-container");
 let imageEl = document.getElementById("img-el");
 const nextQuestionDisplay = document.getElementById("next-question");
 let restartEl = document.getElementById("restart-el");
@@ -18,7 +19,6 @@ let answer1 = document.getElementById("a1");
 let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
 let answer4 = document.getElementById("a4");
-let answerButtons = document.querySelectorAll("button");
 const correctAnswer = ["Well done!", "Great job on that one!", "Excellent"];
 const wrongAnswer = ["Maybe study a little more", "That was a tough one", "Better luck next time"]
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
@@ -38,6 +38,9 @@ let finalScore = () => {
     answer3.style.display = "none";
     answer4.style.display = "none";
     nextQuestionDisplay.style.display = "none";
+    finalDisplay.style.display = "flex";
+    finalDisplay.style.flexDirection = "column";
+    finalDisplay.style.justifyContent = "space-between";
     if(points === 6){
         questionDisplay.innerHTML = allCorrect;
     } else if (points >= 3) {
@@ -46,11 +49,6 @@ let finalScore = () => {
         questionDisplay.innerHTML = lost;
     };
 };
-
-// for loop
-// if lives are = 0
-// display lost
-
 
 
 // function lost_life
