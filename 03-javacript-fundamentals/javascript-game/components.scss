@@ -27,7 +27,7 @@
     
 }
 
-.answer:hover, #next-question:hover {
+#next-question:hover {
     background-color: rgba(173, 216, 230, 0.507);
 }
 
@@ -35,7 +35,11 @@
     cursor: pointer;
 }
 
-.answer:active, #next-question:active {
+.answer:hover {
+    border: 2px solid #f7df1e!important;
+}
+
+#next-question:active {
     background-color: #f7df1e;
 }
 

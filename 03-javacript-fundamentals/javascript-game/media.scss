@@ -8,7 +8,7 @@
         height: 20px;
     }
     
-}
+};
 
 @media screen and (max-width: 944px) {
     h1 {
@@ -25,7 +25,7 @@
 
    
 
-}
+};
 
 @media screen and (max-width: 533px) {
     
@@ -48,4 +48,8 @@
     #question-el {
         font-size: 18px;
     }
-}
+    
+    .answer {
+        font-size: 12px;
+    }
+};

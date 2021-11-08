@@ -19,6 +19,7 @@ let answer1 = document.getElementById("a1");
 let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
 let answer4 = document.getElementById("a4");
+let answersEL = document.getElementsByClassName("answer");
 const correctAnswer = ["Well done!", "Great job on that one!", "Excellent"];
 const wrongAnswer = ["Maybe study a little more", "That was a tough one", "Better luck next time"]
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
@@ -194,9 +195,9 @@ nextQuestionDisplay.addEventListener("click", () => {
 
 // event listener for restart button
 
-restartEl.addEventListener("click", () => {
+let restart = () => {
     location.reload();
-});
+};
 
 // disable buttons 
 
