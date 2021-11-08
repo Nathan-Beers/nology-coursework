@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, input {
   background-color: #306230;
   color: #9bbc0f;
   text-align: center;
@@ -37,7 +37,6 @@ p, label {
   color: #306230;
 }
 #display-container #display-content p {
-  text-align: right;
   color: #0f380f;
 }
 

@@ -5,11 +5,10 @@ let equationDisplayEl = document.getElementById("equationDisplay-el");
 let operator = "";
 let firstNumberEl = document.getElementById("firstNumber");
 let secondNumberEl = document.getElementById("secondNumber");
-
-        
-
+let cancelEl = document.getElementById("reset");
 
 let reset = () => {
+        cancelEl.src = "./resources/btn_C_pressed.png";
         location.reload();
 }
 
@@ -32,10 +31,6 @@ let getSecondNumber = () => {
         equationDisplayEl.innerHTML = firstNumber + operator + secondNumber;
 }
 
-let invalid = () => {
-        let inputs = document.getElementsByClassName("numberInputs");
-        
-}
 
 let calculate = () => {
         let equation = [firstNumber, operator, secondNumber];
