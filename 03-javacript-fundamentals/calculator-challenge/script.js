@@ -39,7 +39,6 @@ let calculate = () => {
 
         if(firstNumber === null || operator === "" || secondNumber === null){
                 alert("Please enter two numbers and select an operator");
-                invalid();
         } else if (typeof firstNumber == "number" && operator === "" && typeof secondNumber == "number") {
                 alert("Please select an operator");
         } else {
