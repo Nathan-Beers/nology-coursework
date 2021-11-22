@@ -15,7 +15,7 @@ let reset = () => {
 
 let getFirstNumber = () => {
         displayEl.innerHTML = firstNumberEl.value;
-        firstNumber = parseInt(firstNumberEl.value, 10);
+        firstNumber = parseInt(firstNumberEl.value);
         equationDisplayEl.innerHTML = firstNumber;
 };
 
@@ -27,7 +27,7 @@ let getOperator = (event) => {
 
 let getSecondNumber = () => {
         displayEl.innerHTML = secondNumberEl.value;
-        secondNumber = parseInt(secondNumberEl.value, 10);
+        secondNumber = parseInt(secondNumberEl.value);
         equationDisplayEl.innerHTML = firstNumber + operator + secondNumber;
 }
 
