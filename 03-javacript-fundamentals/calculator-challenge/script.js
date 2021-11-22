@@ -9,7 +9,10 @@ let cancelEl = document.getElementById("reset");
 
 let reset = () => {
         cancelEl.src = "./resources/btn_C_pressed.png";
-        location.reload();
+        setTimeout(() => {
+                location.reload();
+        },500)
+        
 }
 
 
