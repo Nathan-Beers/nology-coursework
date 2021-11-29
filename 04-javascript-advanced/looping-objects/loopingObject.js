@@ -5,7 +5,7 @@ const validMessage = {
 
 const invalidMessage = {
     userName : "Charlie",
-    content : 2531313,
+    error : 2531313,
 };
 
 // for (let key in message) {
@@ -51,5 +51,24 @@ const isMessageObjectString = (messageObject) => {
 const validMessageKeys = Object.keys(validMessage);
 const invalidMessageKeys = Object.keys(invalidMessage);
 
-console.log(validMessageKeys);
-console.log(invalidMessageKeys);
+// console.log(validMessageKeys);
+// console.log(invalidMessageKeys);
+
+// Write a function that will check the keys of a mesage object
+// valid keys =>["username", "content"]
+// so i want you to return true for valid, false for invalid
+
+
+const validateKeys = (message) => {
+    const objectKeys = Object.keys(message);
+
+    const keyCheck = objectKeys.every(key => {
+        const validKeys = ['userName', 'content'];
+        return validKeys.includes(key);
+    });
+
+    return keyCheck;
+};
+
+console.log(validateKeys(validMessage));
+console.log(validateKeys(invalidMessage));
