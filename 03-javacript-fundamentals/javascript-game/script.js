@@ -20,6 +20,8 @@ let answer2 = document.getElementById("a2");
 let answer3 = document.getElementById("a3");
 let answer4 = document.getElementById("a4");
 let answersEL = document.getElementsByClassName("answer");
+let time = 10;
+let timerEl = document.querySelector(".timer");
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
 const halfCorrect = "You did good! But there's a little to study up on";
 const lost = "Don't get disheartened! Just practise and try again!";
@@ -123,6 +125,7 @@ let q2 = () => {
     answer4.innerHTML = "js";
     question2 = true;
     question1 = false;
+    
 };
 
 let q3 = () => {
@@ -189,6 +192,7 @@ nextQuestionDisplay.addEventListener("click", () => {
     answer3.classList.remove("right-answer","wrong-answer");
     answer4.classList.remove("right-answer","wrong-answer");
     enable();
+    timer()
 });
 
 // event listener for restart button
@@ -260,3 +264,22 @@ answer4.addEventListener("click", () => {
         answer4.classList.add("wrong-answer")
     }
 });
+
+
+let timer = () => {
+    time = 10;
+    setInterval(() => {
+        if(time === 0) {
+            clearInterval();
+            disable();
+        } else {
+        time -= 1;
+        timerEl.innerHTML = `Time: ${time}`; 
+        console.log(time);
+        }
+    }, 1000);
+};
+
+timer()
+
+
