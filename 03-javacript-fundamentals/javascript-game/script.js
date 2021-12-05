@@ -232,6 +232,7 @@ nextQuestionDisplay.addEventListener("click", () => {
     answer3.classList.remove("right-answer","wrong-answer");
     answer4.classList.remove("right-answer","wrong-answer");
     enable();
+    time = 10;
     timer()
 });
 
@@ -306,9 +307,7 @@ answer4.addEventListener("click", () => {
 });
 
 
-let timer = () => {
-    time = 10;
-    setInterval(() => {
+let timer = setInterval(() => {
         if(time === 0) {
             clearInterval();
             disable();
@@ -318,8 +317,6 @@ let timer = () => {
         console.log(time);
         }
     }, 1000);
-};
 
-timer()
-
+timer();
 
