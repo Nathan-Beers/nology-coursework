@@ -237,9 +237,9 @@ nextQuestionDisplay.addEventListener("click", () => {
 
 // event listener for restart button
 
-let restart = () => {
+restartEl.addEventListener("click", ()  => {
     location.reload();
-};
+});
 
 // disable buttons 
 
