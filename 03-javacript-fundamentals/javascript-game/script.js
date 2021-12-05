@@ -24,7 +24,116 @@ let time = 10;
 let timerEl = document.querySelector(".timer");
 const allCorrect = "Wow you got them all right! Looks like your a Javascript Dev!";
 const halfCorrect = "You did good! But there's a little to study up on";
-const lost = "Don't get disheartened! Just practise and try again!";
+const lost = "Don't ge  1t disheartened! Just practise and try again!";
+
+// Questions object
+
+let questions = {
+    q2 : {  
+        question : "Inside which HTML element do we put in Javascript?",
+        image : "./resources/html.png",
+        a1 : "scripting",
+        a2 : "script",
+        a3 : "javascript",
+        a4 : "js",
+        change()  {
+            questionDisplay.innerHTML = this.question;
+            imageEl.src = this.image;
+            answer1.innerHTML = this.a1;
+            answer2.innerHTML = this.a2;
+            answer3.innerHTML = this.a3;
+            answer4.innerHTML = this.a4;
+            answer2.setAttribute("value", "true");
+            answer3.removeAttribute("value", "true");
+            question2 = true;
+            question1 = false;
+        },
+    },
+
+    q3 : {  
+        question : "Which of these is a Javascript framework?",
+        image : "./resources/js.png",
+        a1 : "Lua",
+        a2 : "Python",
+        a3 : "Scss",
+        a4 : "React",
+        change()  {
+            questionDisplay.innerHTML = this.question;
+            imageEl.src = this.image;
+            answer1.innerHTML = this.a1;
+            answer2.innerHTML = this.a2;
+            answer3.innerHTML = this.a3;
+            answer4.innerHTML = this.a4;
+            answer4.setAttribute("value", "true");
+            answer2.removeAttribute("value", "true");
+            question3 = true;
+            question2 = false;
+        },
+    },
+
+    q4 : {  
+        question : "What is the correct syntax to refer an external script file?",
+        image : "./resources/js-square-brands.png",
+        a1 : `script name="script.js"`,
+        a2 : `script src="script.js"`,
+        a3 : `script href="script.js"`,
+        a4 : `link src="script.js"`,
+        change()  {
+            questionDisplay.innerHTML = this.question;
+            imageEl.src = this.image;
+            answer1.innerHTML = this.a1;
+            answer2.innerHTML = this.a2;
+            answer3.innerHTML = this.a3;
+            answer4.innerHTML = this.a4;
+            answer2.setAttribute("value", "true");
+            answer4.removeAttribute("value", "true")
+            question4 = true;
+            question3 = false;
+        },
+    },
+
+    q5 : {  
+        question : "How do you add a comment in Javascript?",
+        image : "./resources/comment.png",
+        a1 : "// Comment",
+        a2 : "# Comment",
+        a3 : "--Comment--",
+        a4 : "| Comment",
+        change()  {
+            questionDisplay.innerHTML = this.question;
+            imageEl.src = this.image;
+            answer1.innerHTML = this.a1;
+            answer2.innerHTML = this.a2;
+            answer3.innerHTML = this.a3;
+            answer4.innerHTML = this.a4;
+            answer1.setAttribute("value", "true");
+            answer2.removeAttribute("value", "true");
+            question5 = true;
+            question4 = false;
+        },
+    },
+
+    q6 : {  
+        question : "What would: const age = (3 + 2 - 1)*2 print?",
+        image : "./resources/calculate.png",
+        a1 : "9",
+        a2 : "10",
+        a3 : "(3 + 2 - 1)*2",
+        a4 : "8",
+        change()  {
+            questionDisplay.innerHTML = this.question;
+            imageEl.src = this.image;
+            answer1.innerHTML = this.a1;
+            answer2.innerHTML = this.a2;
+            answer3.innerHTML = this.a3;
+            answer4.innerHTML = this.a4;
+            answer4.setAttribute("value", "true");
+            answer1.removeAttribute("value", "true");
+            question6 = true;
+            question5 = false;
+        },
+    },
+};
 
 
 // function final_score
@@ -98,87 +207,18 @@ let nextQuestion = () => {
     if(question6 === true) {
         finalScore();
     } else if (question5 === true) {
-        q6();
+        questions.q6.change();
     } else if (question4 === true) {
-        q5();
+        questions.q5.change();
     } else if (question3 === true) {
-        q4();
+        questions.q4.change();
     } else if (question2 === true) {
-        q3();
+        questions.q3.change();
     } else if (question1 === true) {
-        q2()
+        questions.q2.change();
     } else {
         
     }
-};
-
-// functions to change display for each question
-
-let q2 = () => {
-    questionDisplay.innerHTML = "Inside which HTML element do we put in Javascript?";
-    imageEl.src = "./resources/html.png";
-    answer1.innerHTML = "scripting";
-    answer2.innerHTML = "script";
-    answer2.setAttribute("value", "true");
-    answer3.innerHTML = "javascript";
-    answer3.removeAttribute("value", "true");
-    answer4.innerHTML = "js";
-    question2 = true;
-    question1 = false;
-    
-};
-
-let q3 = () => {
-    questionDisplay.innerHTML = "Which of these is a Javascript framework?"
-    imageEl.src = "./resources/js.png";
-    answer1.innerHTML = "Lua";
-    answer2.innerHTML = "Python";
-    answer3.innerHTML = "Scss";
-    answer4.innerHTML = "React";
-    answer4.setAttribute("value", "true");
-    answer2.removeAttribute("value", "true");
-    question3 = true;
-    question2 = false;
-};
-
-let q4 = () => {
-    questionDisplay.innerHTML = "What is the correct syntax to refer an external script file?";
-    imageEl.src = "./resources/js-square-brands.png";
-    answer1.innerHTML = `script name="script.js"`;
-    answer2.innerHTML = `script src="script.js"`;
-    answer2.setAttribute("value", "true");
-    answer3.innerHTML = `script href="script.js"`;
-    answer4.innerHTML = `link src="script.js"`;
-    answer4.removeAttribute("value", "true")
-    question4 = true;
-    question3 = false;
-};
-
-let q5 = () => {
-    questionDisplay.innerHTML = "How do you add a comment in Javascript?";
-    imageEl.src = "./resources/comment.png";
-    answer1.innerHTML = "// Comment";
-    answer1.setAttribute("value", "true");
-    answer2.innerHTML = "# Comment";
-    answer3.innerHTML = "--Comment--";
-    answer4.innerHTML = "| Comment";
-    answer2.removeAttribute("value", "true");
-    question5 = true;
-    question4 = false;
-};
-
-
-let q6 = () => { 
-    questionDisplay.innerHTML = "What would: const age = (3 + 2 - 1)*2 print?";
-    imageEl.src = "./resources/calculate.png";
-    answer1.innerHTML = "9";
-    answer2.innerHTML = "10";
-    answer3.innerHTML = "(3 + 2 - 1)*2";
-    answer4.innerHTML = "8";
-    answer4.setAttribute("value", "true");
-    answer1.removeAttribute("value", "true");
-    question6 = true;
-    question5 = false;
 };
 
 // event listener for next question button
