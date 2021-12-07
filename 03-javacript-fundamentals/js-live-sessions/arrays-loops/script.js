@@ -63,4 +63,14 @@ const game = [
 
 console.log(game[0].title);
 
-// Timestamp : 49 minutes in
+for (let i = 0; i < years.length; i++) {
+    if (years[i] < 2000) {
+        console.log(`The year is: ${years[i]}`);
+    }
+    
+};
+
+for (let i = 0; i < years.length; i++) {
+    let yearsSince = 2021 - years[i];
+    console.log(`Its been ${yearsSince} years since ${years[i]} `)
+};
