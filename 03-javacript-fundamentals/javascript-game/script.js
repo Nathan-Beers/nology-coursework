@@ -233,7 +233,7 @@ nextQuestionDisplay.addEventListener("click", () => {
     answer4.classList.remove("right-answer","wrong-answer");
     enable();
     time = 10;
-    timer()
+    
 });
 
 // event listener for restart button
@@ -318,5 +318,4 @@ let timer = setInterval(() => {
         }
     }, 1000);
 
-timer();
 
