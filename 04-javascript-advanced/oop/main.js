@@ -26,12 +26,16 @@
 // console.log(mag1.getSummary())
 
 class Vehicle {
-    constructor(name, gear, speed) {
+    constructor(name, gears, speed) {
         this.name = name;
-        this.gears = gear;
+        this.gears = gears;
         this.speed = speed;
         this.currentDirection = 0;
     };
+
+    getSpeed() {
+        return `You're currently traveling at ${this.speed} MPH.`
+    }
 
     getCurrentDirection() {
         return `You're currently steering at${this.currentDirection} degrees.`;
@@ -43,14 +47,14 @@ class Vehicle {
     }
 
     getSummary() {
-        return `You've choosen ${this.name}. Currently it's in gear ${this.gear}. And it's speed is currently ${this.speed} MPH.`
+        return `You've choosen ${this.name}. Currently it's in gear ${this.gears}. And it's speed is currently ${this.speed} MPH.`
     };
 
     setIncreaseGear() {
-        if(this.gear <= 5) {
-            this.gear += 1;
+        if(this.gears <= 5) {
+            this.gears += 1;
             this.speed += 10;
-            return `You have increased your gear to ${this.gear}, and now moving at the speed of ${this.speed} MPH.`
+            return `You have increased your gear to ${this.gears}, and now moving at the speed of ${this.speed} MPH.`
         } else {
             return `You are in the top gear, you cannot go any faster.`
             
@@ -58,20 +62,20 @@ class Vehicle {
     };
 
     setDecreaseGear() {
-        if(this.gear >= 1) {
-            this.gear -= 1;
+        if(this.gears >= 1) {
+            this.gears -= 1;
             this.speed -= 10;
-            return `You have decreased your gear to ${this.gear}, and now moving at the speed of ${this.speed} MPH.`
+            return `You have decreased your gear to ${this.gears}, and now moving at the speed of ${this.speed} MPH.`
         } else {
             return `You're now parked.`
         };
     };
 
     setReverse() {
-        if(this.gear === 0 && this.speed === 0) {
+        if(this.gears === 0 && this.speed === 0) {
             return `You are now reversing`
         } else {
-            return `You're in gear ${this.gear}, traveling at the speed of ${this.speed} MPH. Please slow down before reversing.`
+            return `You're in gear ${this.gears}, traveling at the speed of ${this.speed} MPH. Please slow down before reversing.`
         }
     }
 
@@ -79,9 +83,13 @@ class Vehicle {
 
 const car = new Vehicle("Nissan Micra", 2, 20);
 
+console.log(car)
+console.log(car.setIncreaseGear())
+
+
 class VW extends Vehicle {
-    constructor(name, gear, speed, colour, isManual, doors){
-        super(name, gear, speed);
+    constructor(name, gears, speed, colour, isManual, doors){
+        super(name, gears, speed);
         this.colour = colour;
         this.isManual = isManual;
         this.doors = doors;
@@ -91,4 +99,7 @@ class VW extends Vehicle {
 
 const VW1 = new VW("Up!", 6, 60, "red", true, 5);
 
-console.log(VW1)
+console.log(VW1.setSteer(45));
+console.log(VW1.setSteer(90));
+console.log(VW1.getSpeed());
+console.log(VW1.setDecreaseGear())
